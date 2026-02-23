@@ -1,188 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakr Makes | Founded by Mohamed Sakr</title>
-  <meta name="description" content="Sakr Makes is a technology and engineering platform founded by Mohamed Sakr, a Computer Engineering student and IEEE MET CSC Chairman.">
-  <meta name="google-site-verification" content="google89e1481de19492c3.html" />
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Sakr Makes | Founded by Mohamed Sakr">
-  <meta property="og:description" content="Sakr Makes - Technology platform founded by Mohamed Sakr. Computer Engineering Student & IEEE MET CSC Chairman.">
-  
-  <meta property="og:site_name" content="Sakr Makes">
-  <meta property="og:image" content="Sakr.jpeg">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sakr Makes | Founded by Mohamed Sakr">
-  <meta name="twitter:description" content="Engineering platform founded by Mohamed Sakr">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070A12" />
 
-  
+  <title>Sakr Makes — Technology & Engineering Platform Founded by Mohamed Sakr</title>
+  <meta name="description" content="Sakr Makes is a technology and engineering platform founded by Mohamed Sakr. Explore mission, engineering philosophy, and projects built with a product execution mindset." />
+  <meta name="author" content="Mohamed Sakr" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
   <!-- Canonical -->
-  <link rel="canonical" href="https://sakrmakes.com">
-  
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://sakrmakes.com/#organization",
-        "name": "Sakr Makes",
-        "url": "https://sakrmakes.com",
-        "founder": {
-          "@id": "https://sakrmakes.com/#person"
-        },
-        "sameAs": [
-          "https://youtube.com/@sakrmakes",
-          "https://linkedin.com/in/mohamed-sakr-15b674279"
-        ],
-        "description": "Technology and engineering platform founded by Mohamed Sakr"
-      },
-      {
-        "@id": "https://sakrmakes.com/#person",
-        "@type": "Person",
-        "name": "Mohamed Sakr",
-        "jobTitle": "Founder of Sakr Makes",
-        "worksFor": {
-          "@id": "https://sakrmakes.com/#organization"
-        },
-        "sameAs": ["https://linkedin.com/in/mohamed-sakr-15b674279"],
-        "description": "Computer Engineering Student and IEEE MET CSC Chairman. Founder of Sakr Makes."
-      }
-    ]
-  }
-  </script>
-  
-  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://sakr-makes.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sakr Makes" />
+  <meta property="og:title" content="Sakr Makes — Founded by Mohamed Sakr" />
+  <meta property="og:description" content="Sakr Makes is a technology and engineering platform founded by Mohamed Sakr. Mission, vision, and execution-driven projects." />
+  <meta property="og:url" content="https://sakr-makes.vercel.app/" />
+  <meta property="og:image" content="https://sakr-makes.vercel.app/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sakr Makes — Technology & Engineering Platform founded by Mohamed Sakr" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sakr Makes — Technology & Engineering Platform" />
+  <meta name="twitter:description" content="Sakr Makes founded by Mohamed Sakr. Engineering philosophy, mission, and project execution." />
+  <meta name="twitter:image" content="https://sakr-makes.vercel.app/images/og-cover.jpg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-container">
-      <a href="#hero" class="logo">
-        <span class="logo-text">Sakr Makes</span>
-      </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">Founder</a></li>
-        <li><a href="#sakr-makes">Sakr Makes</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Sakr Makes</h1>
-        <p class="hero-subtitle">Founded by Mohamed Sakr</p>
-        <p class="hero-description">
-          Sakr Makes bridges engineering thinking with real-world product execution. 
-          Founded by Mohamed Sakr to transform ideas into impactful technology solutions.
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Sakr Makes home">
+      <img class="brand-logo" src="/images/sakr-makes-logo.jpg" alt="Sakr Makes logo" width="34" height="34" loading="eager" decoding="async" />
+      <span>
+        <span class="name">Sakr Makes</span>
+        <span class="tag">Technology & Engineering • Founded by Mohamed Sakr</span>
+      </span>
+    </a>
+
+    <button id="menuBtn" class="menu-btn" aria-controls="siteNav" aria-expanded="false" type="button">
+      <span aria-hidden="true">☰</span> Menu
+    </button>
+
+    <nav id="siteNav" class="nav" aria-label="Primary navigation">
+      <a href="/index.html" aria-current="page">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+  </ol>
+</div>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero-grid">
+      <article class="card pad-lg">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Primary Entity: Sakr Makes</div>
+        <h1>Sakr Makes is a technology and engineering platform founded by <span class="mono">Mohamed Sakr</span>.</h1>
+        <p class="lead">
+          Sakr Makes builds practical engineering systems with an execution-first mindset. The platform is designed to
+          publish projects, engineering notes, and product-grade implementations—while clearly connecting the entity
+          <strong>Sakr Makes</strong> to its founder, <strong>Mohamed Sakr</strong>.
         </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary" aria-label="Explore Sakr Makes projects">Explore Projects</a>
-          <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" class="btn btn-secondary" target="_blank" rel="noopener" aria-label="Connect with Mohamed Sakr on LinkedIn">Connect on LinkedIn</a>
-          <a href="https://youtube.com/@sakrmakes" class="btn btn-glass" target="_blank" rel="noopener" aria-label="Visit Sakr Makes YouTube channel">Watch on YouTube</a>
+
+        <div class="badges" aria-label="Key identity signals">
+          <span class="badge">Sakr Makes</span>
+          <span class="badge">Mohamed Sakr</span>
+          <span class="badge">Sakr Makes founded by Mohamed Sakr</span>
+          <span class="badge">Founder of Sakr Makes</span>
+          <span class="badge">Mohamed Sakr Computer Engineering</span>
         </div>
-      </div>
-    </section>
 
-    <!-- About Founder -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <h2 class="section-title">About Mohamed Sakr</h2>
-        <article class="about-content glass-card">
-          <p>
-            <strong>Mohamed Sakr is the founder of Sakr Makes</strong>, a technology platform 
-            dedicated to turning engineering concepts into real products. As a Computer Engineering 
-            student and IEEE MET CSC Chairman, Mohamed Sakr leads initiatives that bridge 
-            academic theory with practical industry solutions.
-          </p>
-          <p class="mt-8">
-            Sakr Makes was founded by Mohamed Sakr to solve the gap between engineering 
-            education and product development. Through hands-on projects and strategic execution, 
-            Mohamed Sakr is building a platform where engineering meets reality.
-          </p>
-        </article>
-      </div>
-    </section>
+        <div class="actions">
+          <a class="btn primary" href="/projects.html">Explore Projects</a>
+          <a class="btn" href="/about.html">About Mohamed Sakr</a>
+          <a class="btn" href="/contact.html">All Links</a>
+        </div>
 
-    <!-- Sakr Makes -->
-    <section id="sakr-makes" class="sakr-makes-section">
-      <div class="container">
-        <h2 class="section-title gradient-text">What is Sakr Makes?</h2>
-        <div class="sakr-content">
-          <div class="sakr-text glass-card">
-            <h3 class="sakr-heading">Mission</h3>
-            <p>Transform engineering ideas into market-ready products through hands-on development, strategic product thinking, and relentless execution.</p>
-            
-            <h3 class="sakr-heading mt-12">Vision</h3>
-            <p>Create an ecosystem where engineering students and professionals build, ship, and scale real-world technology solutions.</p>
-          </div>
-          
-          <div class="focus-areas glass-card">
-            <h3 class="sakr-heading">Focus Areas</h3>
-            <ul role="list">
-              <li>🤖 AI & Machine Learning</li>
-              <li>🔌 Embedded Systems & IoT</li>
-              <li>💡 Product Strategy</li>
-              <li>⚙️ Engineering Projects</li>
-            </ul>
+        <div class="hr"></div>
+
+        <h2>Mission and Vision</h2>
+        <p>
+          The mission of <strong>Sakr Makes</strong> is to turn engineering knowledge into tangible output—projects that run,
+          documentation that teaches, and systems that ship. The vision is long-term: build a durable platform where
+          <strong>Mohamed Sakr</strong> publishes work that compounds, earning trust through clarity, testing, and repeatable execution.
+        </p>
+
+        <h2>Engineering Philosophy</h2>
+        <p>
+          <strong>Sakr Makes</strong> follows a product execution mindset: define constraints, build minimal viable architecture,
+          validate quickly, and iterate with measurable improvements. This engineering philosophy reflects
+          <strong>Mohamed Sakr</strong>'s focus as a <strong>Computer Engineering</strong> student—prioritizing systems thinking, reliability, and
+          practical delivery.
+        </p>
+      </article>
+
+      <aside class="card pad-lg" aria-label="Founder summary">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Founder Entity: Mohamed Sakr</div>
+
+        <div style="display:flex; gap:14px; align-items:center; margin:.8rem 0 1rem;">
+          <img class="avatar" src="/images/mohamed-sakr.jpeg" alt="Mohamed Sakr, Founder of Sakr Makes" width="72" height="72" loading="lazy" decoding="async" />
+          <div>
+            <strong>Mohamed Sakr</strong><br/>
+            <small>Founder of Sakr Makes • Computer Engineering • IEEE MET CSC Chairman</small>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title gradient-text">Featured Projects</h2>
-        <div id="projects-grid" class="projects-grid" role="list">
-          <!-- Projects rendered dynamically by JavaScript -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title gradient-text">Get In Touch</h2>
-        <div class="contact-content">
-          <div class="contact-info glass-card">
-            <p class="contact-email" aria-label="Email Mohamed Sakr">
-              <a href="mailto:mo.sakr1400@gmail.com">mo.sakr1400@gmail.com</a>
-            </p>
+        <div class="meta-grid">
+          <div class="meta">
+            <div class="label">Founder</div>
+            <div class="value">Mohamed Sakr</div>
+            <small>Founder of Sakr Makes • Computer Engineering</small>
           </div>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" class="btn btn-primary" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-            <a href="https://youtube.com/@sakrmakes" class="btn btn-secondary" target="_blank" rel="noopener">
-              YouTube
-            </a>
+          <div class="meta">
+            <div class="label">Title</div>
+            <div class="value">Founder of Sakr Makes | Computer Engineering Student | IEEE MET CSC Chairman</div>
+          </div>
+          <div class="meta">
+            <div class="label">Links</div>
+            <div class="value">
+              <a href="https://youtube.com/@sakrmakes" rel="noopener" target="_blank">YouTube</a>
+              <span class="mono"> • </span>
+              <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" rel="noopener" target="_blank">LinkedIn</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer role="contentinfo">
-    <div class="container">
-      <p>&copy; 2026 Sakr Makes. Founded by Mohamed Sakr. All rights reserved.</p>
+        <div class="hr"></div>
+
+        <h2>Why Sakr Makes Exists</h2>
+        <p>
+          <strong>Sakr Makes</strong> was founded by <strong>Mohamed Sakr</strong> to bridge the gap between “learning engineering” and
+          “shipping engineering.” The platform emphasizes reusable systems, clean documentation, and a public record of
+          execution—so Google and users can consistently associate <strong>Mohamed Sakr</strong> as the founder behind <strong>Sakr Makes</strong>.
+        </p>
+
+        <a class="btn" href="/contact.html">Open all official links</a>
+      </aside>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script src="script.js"></script>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Sakr Makes</strong><br />
+      <small>Sakr Makes is a technology and engineering platform founded by MohamedSakr.</small>
+    </div>
+    <div>
+      <small>
+        <a href="/about.html">About</a> •
+        <a href="/projects.html">Projects</a> •
+        <a href="/contact.html">Contact</a>
+      </small>
+    </div>
+    <div>
+      <small>
+        Founder: <strong>Mohamed Sakr</strong><br />
+        <a href="https://youtube.com/@sakrmakes" rel="noopener" target="_blank">YouTube</a> •
+        <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" rel="noopener" target="_blank">LinkedIn</a>
+      </small>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Sakr Makes",
+      "url": "https://yourdomain.com",
+      "logo": "https://yourdomain.com/images/sakr-makes-logo.png",
+      "founder": { "@type": "Person", "name": "Mohamed Sakr" },
+      "sameAs": [
+        "https://youtube.com/@sakrmakes",
+        "https://www.linkedin.com/in/mohamed-sakr-15b674279"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Mohamed Sakr",
+      "jobTitle": "Founder of Sakr Makes",
+      "worksFor": { "@type": "Organization", "name": "Sakr Makes" },
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamed-sakr-15b674279",
+        "https://youtube.com/@sakrmakes"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Sakr Makes",
+      "url": "https://yourdomain.com",
+      "publisher": { "@type": "Organization", "name": "Sakr Makes" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type":"ListItem", "position": 1, "name":"Home", "item":"https://yourdomain.com/" }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>
