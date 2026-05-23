@@ -1,0 +1,343 @@
+{
+  "profile": {
+    "handle": "Mohamed Sakr",
+    "title": "Founder of Sakr Makes — AI & ML Engineer",
+    "bio": "I am Mohamed Sakr — Founder of Sakr Makes. As an AI engineer and developer, I create custom code, 3D designs, and hands-on hardware prototypes. Discover how machine learning meets physical engineering on Sakr Makes by Mohamed Sakr.",
+    "avatar": "Mohamed Sakr.png",
+    "role": "Founder of Sakr Makes"
+  },
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "icon": "fa-brands fa-linkedin-in",
+      "url": "https://www.linkedin.com/in/mohamed-sakr-15b674279/"
+    },
+    {
+      "platform": "Github",
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/M0hamedSakr"
+    },
+    {
+      "platform": "Instagram",
+      "icon": "fa-brands fa-instagram",
+      "url": "https://www.instagram.com/mohamed_sakre_______/"
+    },
+    {
+      "platform": "Facebook",
+      "icon": "fa-brands fa-facebook-f",
+      "url": "https://www.facebook.com/mohamed.m.sakrr?locale=ar_AR"
+    }
+  ],
+  "links": [
+    {
+      "title": "Sakr Makes (Facebook)",
+      "icon": "fa-brands fa-facebook-f",
+      "url": "https://www.facebook.com/sakr.makes"
+    },
+    {
+      "title": "Sakr Makes (Instagram)",
+      "icon": "fa-brands fa-instagram",
+      "url": "https://www.instagram.com/sakr.makes/"
+    },
+    {
+      "title": "LinkedIn Profile",
+      "icon": "fa-brands fa-linkedin-in",
+      "url": "https://www.linkedin.com/in/mohamed-sakr-15b674279/"
+    },
+    {
+      "title": "Github Repository",
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/M0hamedSakr"
+    },
+    {
+      "title": "Youtube Channel",
+      "icon": "fa-brands fa-youtube",
+      "url": "https://www.youtube.com/@SAKRMAKES"
+    },
+    {
+      "title": "TikTok Creator Page",
+      "icon": "fa-brands fa-tiktok",
+      "url": "https://www.tiktok.com/@sakr_makes"
+    },
+    {
+      "title": "Maker World 3D Designs",
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "url": "https://makerworld.com/en/@saKR"
+    },
+    {
+      "title": "Gmail Contact",
+      "icon": "fa-solid fa-envelope",
+      "url": "mailto:mo.sakr1400@gmail.com"
+    },
+    {
+      "title": "WhatsApp Message",
+      "icon": "fa-brands fa-whatsapp",
+      "url": "https://wa.me/201009252592"
+    }
+  ],
+  "experience": [
+    {
+      "id": "sakr-makes-founder",
+      "title": "Founder",
+      "organization": "Sakr Makes",
+      "type": "Freelance",
+      "startDate": "Dec 2025",
+      "endDate": "Present",
+      "duration": "6 mos",
+      "location": "Egypt",
+      "description": "Founded and lead Sakr Makes by Mohamed Sakr — bringing ideas to life through AI development, 3D printing, Fusion 360 mechanical modeling, and hardware prototyping.",
+      "skills": ["Engineering", "AI", "3D Printing", "Fusion 360", "Content Creation"],
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "colorClass": "exp-accent"
+    },
+    {
+      "id": "ieee-vice-chair",
+      "title": "Vice Chair",
+      "organization": "IEEE MET CSC",
+      "type": "Part time",
+      "startDate": "Sep 2025",
+      "endDate": "Present",
+      "duration": "9 mos",
+      "location": "El Mansoura, Ad Daqahliyah, Egypt",
+      "description": "Leading IEEE MET Computer Society Chapter initiatives — coordinating technical and non-technical teams, organizing workshops, coding bootcamps, and developer competitions for students.",
+      "skills": ["Leadership", "Event Organization", "Community Building", "Team Coordination"],
+      "icon": "fa-solid fa-users",
+      "colorClass": "exp-pink"
+    },
+    {
+      "id": "it-support-internship",
+      "title": "IT Support Specialist",
+      "organization": "Let's Know Training & Consulting Center",
+      "type": "Internship",
+      "startDate": "Jan 2025",
+      "endDate": "Jun 2025",
+      "duration": "6 mos",
+      "location": "El Mansoura, Ad Daqahliyah, Egypt",
+      "description": "During this internship journey, I gained practical hands-on IT support and networking skills working with real enterprise systems and configurations.",
+      "skills": ["DHCP", "DNS", "Networking", "IT Support", "Systems Administration"],
+      "icon": "fa-solid fa-server",
+      "colorClass": "exp-secondary"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "huawei-ai",
+      "title": "Artificial Intelligence Certification",
+      "issuer": "HUAWEI",
+      "date": "2024",
+      "icon": "fa-solid fa-brain",
+      "category": "AI & ML",
+      "categoryClass": "cat-ai"
+    },
+    {
+      "id": "icpc",
+      "title": "International Collegiate Programming Contest",
+      "issuer": "ICPC Foundation",
+      "date": "2024",
+      "icon": "fa-solid fa-trophy",
+      "category": "Competitive Programming",
+      "categoryClass": "cat-competitive"
+    },
+    {
+      "id": "nvidia-ml",
+      "title": "Machine Learning with Python",
+      "issuer": "NVIDIA",
+      "date": "2024",
+      "icon": "fa-solid fa-microchip",
+      "category": "AI & ML",
+      "categoryClass": "cat-ai"
+    },
+    {
+      "id": "sprint-python-ai",
+      "title": "Python & AI Development",
+      "issuer": "Sprint",
+      "date": "2024",
+      "icon": "fa-brands fa-python",
+      "category": "Programming",
+      "categoryClass": "cat-programming"
+    },
+    {
+      "id": "makertech-python",
+      "title": "Python Development",
+      "issuer": "MakerTech",
+      "date": "2024",
+      "icon": "fa-brands fa-python",
+      "category": "Programming",
+      "categoryClass": "cat-programming"
+    },
+    {
+      "id": "programming-hero-foundation",
+      "title": "Programming Foundation",
+      "issuer": "Programming Hero",
+      "date": "2024",
+      "icon": "fa-solid fa-code",
+      "category": "Programming",
+      "categoryClass": "cat-programming"
+    },
+    {
+      "id": "programming-hero-dsa",
+      "title": "Algorithms & Problem Solving",
+      "issuer": "Programming Hero",
+      "date": "2024",
+      "icon": "fa-solid fa-diagram-project",
+      "category": "Competitive Programming",
+      "categoryClass": "cat-competitive"
+    },
+    {
+      "id": "creative-content",
+      "title": "Digital Fabrication & Content Creation",
+      "issuer": "Creative",
+      "date": "2024",
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "category": "Design",
+      "categoryClass": "cat-design"
+    }
+  ],
+  "leadership": {
+    "role": "Vice Chairman",
+    "organization": "IEEE MET Computer Society Chapter",
+    "tagline": "IEEE MET CSC · Official Computer Society chapter under IEEE Student Branch at MET Academy, Egypt.",
+    "bullets": [
+      "Coordinating technical and non-technical student teams",
+      "Organizing hands-on workshops, training sessions, and technical events",
+      "Building a collaborative environment for AI, machine learning, and software students",
+      "Strengthening team leadership, communication, and project planning through IEEE initiatives"
+    ]
+  },
+  "sakrMakes": {
+    "title": "Sakr Makes by Mohamed Sakr",
+    "role": "Founder",
+    "description": "Where engineering meets creativity. Sakr Makes is the personal developer, builder, and creator brand of Mohamed Sakr. It explores the intersection of digital design, 3D printing, and smart hardware systems.",
+    "activities": [
+      "Fusion 360 — Modeling functional 3D parts and enclosures for mechanical assemblies",
+      "3D Printing — Operating hardware printers, setting up slicers, and tuning filament tolerances",
+      "Prototyping — Combining custom 3D prints with Arduino boards, sensors, and power systems"
+    ]
+  },
+  "skills": {
+    "languages": [
+      { "name": "C++", "logo": "cplusplus" },
+      { "name": "C", "logo": "c" },
+      { "name": "Python", "logo": "python" },
+      { "name": "Flask", "logo": "flask" },
+      { "name": "HTML5", "logo": "html5" },
+      { "name": "CSS3", "logo": "css3" },
+      { "name": "JavaScript", "logo": "javascript" },
+      { "name": "Git", "logo": "git" },
+      { "name": "GitHub", "logo": "github" }
+    ],
+    "ai_ml": [
+      { "name": "Python for Data Analysis & ML", "status": "Active" },
+      { "name": "Supervised & Unsupervised Learning", "status": "Active" },
+      { "name": "Model Evaluation & Data-driven Insights", "status": "Active" },
+      { "name": "Deep Learning & Neural Networks", "status": "Learning" },
+      { "name": "LLMs & Transformers", "status": "Learning" }
+    ],
+    "strengths": [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "Logical Thinking & Problem Solving",
+      "Debugging & Code Analysis"
+    ]
+  },
+  "projects": [
+    {
+      "id": "cleaner-robot",
+      "title": "Cleaner Robot",
+      "tagline": "Water Surface Cleaning Robot Project",
+      "category": "Robotics & Hardware",
+      "description": "An autonomous water-surface robot built with a team to collect and clean floating waste. Initiated with full 3D Fusion 360 models, it uses camera detection to lift trash into its cargo container automatically.",
+      "components": [
+        "4 DC motors (differential locomotion)",
+        "Conveyor belt lift mechanism",
+        "Relay module controllers",
+        "Motor driver circuits",
+        "ESP32-CAM (trash visual tracking)"
+      ],
+      "skills": ["Arduino", "Autodesk Fusion", "ESP32-CAM", "Robotics"],
+      "image": "fa-solid fa-robot",
+      "photo": "1747401996748.jfif",
+      "teamPhoto": "1748158090945.jfif"
+    },
+    {
+      "id": "generate-qrcode",
+      "title": "Generate QRCode",
+      "tagline": "Excel-to-QR Automation Utility",
+      "category": "AI & Software",
+      "description": "A Python automation utility built with Tkinter, Pandas, and QRCode libraries. It processes input Excel rosters, cleans duplicates, and outputs high-quality, individual QR codes to streamline event registration.",
+      "components": [
+        "Tkinter GUI layout",
+        "Pandas data cleaning parser",
+        "QR Code generation engine",
+        "Automated directory storage"
+      ],
+      "skills": ["Python", "Tkinter", "Pandas", "Data Automation"],
+      "image": "fa-solid fa-qrcode"
+    },
+    {
+      "id": "mobile-car",
+      "title": "Mobile Car",
+      "tagline": "Elderly Assistive Smart Mobile Cart",
+      "category": "Robotics & Hardware",
+      "description": "A mechanical mobile cart designed to assist the elderly. It moves, maneuvers, and raises/lifts loads inside cramped indoor locations. Designed using Fusion 360 and built with Arduino control.",
+      "components": [
+        "Lifting scissor-jack mechanism",
+        "Arduino microcontroller brain",
+        "Fusion 360 chassis modeling",
+        "High-torque gear motors"
+      ],
+      "skills": ["Arduino", "Autodesk Fusion", "Hardware Prototyping", "C++"],
+      "image": "fa-solid fa-car",
+      "photo": "1746779083872.jfif",
+      "detailPhoto": "1748158249134.jfif"
+    },
+    {
+      "id": "my-health",
+      "title": "My Health",
+      "tagline": "Smart Medication Scheduler & Alerter",
+      "category": "AI & Software",
+      "description": "A GUI scheduler designed to help patients manage and adhere to medication times. Users log medications and reminder timings, triggering immediate speaker audio tones and Twilio phone SMS notifications.",
+      "components": [
+        "Tkinter prescription GUI",
+        "Playsound audio playback triggers",
+        "Twilio SMS gateway integration",
+        "Schedule background polling thread"
+      ],
+      "skills": ["Python", "Tkinter", "Twilio API", "Audio/SMS Alerters"],
+      "image": "fa-solid fa-heart-pulse"
+    },
+    {
+      "id": "triago",
+      "title": "TRIAGO",
+      "tagline": "Responsive Sales E-Store Front",
+      "category": "Web Dev",
+      "description": "A modern, responsive e-commerce showcase storefront built to replicate a digital electronics shop. Features visual hover transformations and a responsive layouts grid.",
+      "components": [
+        "HTML5 layout scaffolding",
+        "Vanilla CSS variables & grid structure",
+        "Interactive product showcase lists",
+        "GitHub Pages automated deployment"
+      ],
+      "skills": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "image": "fa-solid fa-cart-shopping",
+      "url": "https://m0hamedsakr.github.io/TRIAGO/",
+      "github": "https://github.com/M0hamedSakr/TRIAGO"
+    },
+    {
+      "id": "wheelchair",
+      "title": "Smart Wheelchair",
+      "tagline": "Assistive Collision-Avoidance Wheelchair",
+      "category": "Robotics & Hardware",
+      "description": "An upgraded electric wheelchair featuring automatic sonar collision prevention, user fall-detection triggers, and joystick control, aiming to increase independent mobility safety.",
+      "components": [
+        "Ultrasonic distance ranging arrays",
+        "IMU sensor fall-detection algorithm",
+        "Analog joystick steering handler",
+        "Direct motor speed driver outputs"
+      ],
+      "skills": ["Arduino", "Sensors", "Fall Detection", "Control Systems"],
+      "image": "fa-solid fa-wheelchair",
+      "photo": "1755630400893.jfif"
+    }
+  ]
+}

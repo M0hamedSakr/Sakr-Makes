@@ -1,225 +1,495 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#070A12" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Sakr | Founder of Sakr Makes — AI & ML Engineer</title>
+  <meta name="description" content="Explore the official portfolio of Mohamed Sakr, Founder of Sakr Makes. Specializing in AI & ML engineering, 3D printing, and hardware prototyping. Sakr Makes by Mohamed Sakr.">
+  <meta name="keywords" content="Mohamed Sakr, Sakr Makes, Sakr Makes by Mohamed Sakr, Mohamed Sakr Founder of Sakr Makes, AI Engineer, ML Engineer, 3D Prototyping, Computer Engineering Student">
+  <link rel="canonical" href="https://github.com/M0hamedSakr">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohamed Sakr | Founder of Sakr Makes — AI & ML Engineer">
+  <meta property="og:description" content="Explore the official portfolio of Mohamed Sakr, Founder of Sakr Makes. Discover advanced AI models, creative engineering, and smart hardware designs.">
+  <meta property="og:image" content="Mohamed Sakr.png">
+  <meta property="og:url" content="https://github.com/M0hamedSakr">
+  <meta property="profile:first_name" content="Mohamed">
+  <meta property="profile:last_name" content="Sakr">
+  <meta property="profile:username" content="M0hamedSakr">
 
-  <title>Sakr Makes — Technology & Engineering Platform Founded by Mohamed Sakr</title>
-  <meta name="description" content="Sakr Makes is a technology and engineering platform founded by Mohamed Sakr. Explore mission, engineering philosophy, and projects built with a product execution mindset." />
-  <meta name="author" content="Mohamed Sakr" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohamed Sakr | Founder of Sakr Makes">
+  <meta name="twitter:description" content="Explore AI/ML solutions and creative engineering projects by Mohamed Sakr, the founder of Sakr Makes.">
+  <meta name="twitter:image" content="Mohamed Sakr.png">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://sakr-makes.vercel.app/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Sakr Makes" />
-  <meta property="og:title" content="Sakr Makes — Founded by Mohamed Sakr" />
-  <meta property="og:description" content="Sakr Makes is a technology and engineering platform founded by Mohamed Sakr. Mission, vision, and execution-driven projects." />
-  <meta property="og:url" content="https://sakr-makes.vercel.app/" />
-  <meta property="og:image" content="https://sakr-makes.vercel.app/images/og-cover.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Sakr Makes — Technology & Engineering Platform founded by Mohamed Sakr" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sakr Makes — Technology & Engineering Platform" />
-  <meta name="twitter:description" content="Sakr Makes founded by Mohamed Sakr. Engineering philosophy, mission, and project execution." />
-  <meta name="twitter:image" content="https://sakr-makes.vercel.app/images/og-cover.jpg" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <!-- Google Schema.org JSON-LD for Entity Linking (Mohamed Sakr & Sakr Makes) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://github.com/M0hamedSakr#person",
+        "name": "Mohamed Sakr",
+        "jobTitle": "AI & ML Engineer & Creator",
+        "description": "Founder of Sakr Makes, specializing in AI & ML engineering, robotics, 3D printing, and digital prototyping.",
+        "url": "https://github.com/M0hamedSakr",
+        "sameAs": [
+          "https://www.linkedin.com/in/mohamed-sakr-15b674279/",
+          "https://www.instagram.com/mohamed_sakre_______/",
+          "https://www.facebook.com/mohamed.m.sakrr?locale=ar_AR"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://github.com/M0hamedSakr#organization",
+        "name": "Sakr Makes",
+        "founder": {
+          "@id": "https://github.com/M0hamedSakr#person"
+        },
+        "url": "https://www.facebook.com/sakr.makes",
+        "sameAs": [
+          "https://www.instagram.com/sakr.makes/",
+          "https://www.tiktok.com/@sakr_makes",
+          "https://www.youtube.com/@SAKRMAKES"
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="Logo.jpeg">
 </head>
-
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+  <!-- Cinematic Logo Opening Intro -->
+  <div id="intro-screen" class="intro-screen">
+    <div class="intro-glow-aura"></div>
+    <div class="intro-particles-container" id="intro-particles"></div>
+    
+    <div class="intro-logo-circle-container">
+      <div class="intro-circle-orbit"></div>
+      <div class="intro-circle-orbit-inner"></div>
+      <div class="intro-rotating-glow-ring"></div>
+      <div class="intro-rotating-glow-ring-sharp"></div>
+      
+      <!-- GPU-Accelerated Orbiting Micro-particles -->
+      <div class="intro-orbit-wrapper-1">
+        <div class="intro-orbit-dot dot-1"></div>
+      </div>
+      <div class="intro-orbit-wrapper-2">
+        <div class="intro-orbit-dot dot-2"></div>
+      </div>
 
-<header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="/index.html" aria-label="Sakr Makes home">
-      <img class="brand-logo" src="/images/sakr-makes-logo.jpg" alt="Sakr Makes logo" width="34" height="34" loading="eager" decoding="async" />
-      <span>
-        <span class="name">Sakr Makes</span>
-        <span class="tag">Technology & Engineering • Founded by Mohamed Sakr</span>
-      </span>
-    </a>
-
-    <button id="menuBtn" class="menu-btn" aria-controls="siteNav" aria-expanded="false" type="button">
-      <span aria-hidden="true">☰</span> Menu
-    </button>
-
-    <nav id="siteNav" class="nav" aria-label="Primary navigation">
-      <a href="/index.html" aria-current="page">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/projects.html">Projects</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+      <div class="intro-logo-circle">
+        <img src="Logo.jpeg" alt="Sakr Makes Logo" class="intro-logo">
+        <div class="intro-logo-shimmer"></div>
+      </div>
+    </div>
   </div>
-</header>
 
-<div class="container breadcrumbs" aria-label="Breadcrumb">
-  <ol>
-    <li><a href="/index.html">Home</a></li>
-  </ol>
-</div>
+  <!-- Interactive Cursor Glow Overlay -->
+  <div id="cursor-glow" class="cursor-glow"></div>
 
-<main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <article class="card pad-lg">
-        <div class="kicker"><span class="dot" aria-hidden="true"></span> Primary Entity: Sakr Makes</div>
-        <h1>Sakr Makes is a technology and engineering platform founded by <span class="mono">Mohamed Sakr</span>.</h1>
-        <p class="lead">
-          Sakr Makes builds practical engineering systems with an execution-first mindset. The platform is designed to
-          publish projects, engineering notes, and product-grade implementations—while clearly connecting the entity
-          <strong>Sakr Makes</strong> to its founder, <strong>Mohamed Sakr</strong>.
-        </p>
+  <!-- Canvas for interactive background -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="grid-overlay"></div>
 
-        <div class="badges" aria-label="Key identity signals">
-          <span class="badge">Sakr Makes</span>
-          <span class="badge">Mohamed Sakr</span>
-          <span class="badge">Sakr Makes founded by Mohamed Sakr</span>
-          <span class="badge">Founder of Sakr Makes</span>
-          <span class="badge">Mohamed Sakr Computer Engineering</span>
+  <!-- Glowing background elements -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">
+        <div class="nav-logo-container">
+          <img src="Logo.jpeg" alt="Sakr Makes Brand Logo" class="nav-logo-img">
         </div>
+        <span class="logo-text">Sakr<span class="logo-main">Makes</span></span>
+      </a>
+      <!-- Hamburger toggle for mobile -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#experience-section" class="nav-link">Experience</a></li>
+          <li><a href="#projects-section" class="nav-link">Projects</a></li>
+          <li><a href="#certifications-section" class="nav-link">Certifications</a></li>
+          <li><a href="#links-section" class="nav-link">Links Hub</a></li>
+          <li><a href="#about-section" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <div class="actions">
-          <a class="btn primary" href="/projects.html">Explore Projects</a>
-          <a class="btn" href="/about.html">About Mohamed Sakr</a>
-          <a class="btn" href="/contact.html">All Links</a>
-        </div>
-
-        <div class="hr"></div>
-
-        <h2>Mission and Vision</h2>
-        <p>
-          The mission of <strong>Sakr Makes</strong> is to turn engineering knowledge into tangible output—projects that run,
-          documentation that teaches, and systems that ship. The vision is long-term: build a durable platform where
-          <strong>Mohamed Sakr</strong> publishes work that compounds, earning trust through clarity, testing, and repeatable execution.
-        </p>
-
-        <h2>Engineering Philosophy</h2>
-        <p>
-          <strong>Sakr Makes</strong> follows a product execution mindset: define constraints, build minimal viable architecture,
-          validate quickly, and iterate with measurable improvements. This engineering philosophy reflects
-          <strong>Mohamed Sakr</strong>'s focus as a <strong>Computer Engineering</strong> student—prioritizing systems thinking, reliability, and
-          practical delivery.
-        </p>
-      </article>
-
-      <aside class="card pad-lg" aria-label="Founder summary">
-        <div class="kicker"><span class="dot" aria-hidden="true"></span> Founder Entity: Mohamed Sakr</div>
-
-        <div style="display:flex; gap:14px; align-items:center; margin:.8rem 0 1rem;">
-          <img class="avatar" src="/images/mohamed-sakr.jpeg" alt="Mohamed Sakr, Founder of Sakr Makes" width="72" height="72" loading="lazy" decoding="async" />
-          <div>
-            <strong>Mohamed Sakr</strong><br/>
-            <small>Founder of Sakr Makes • Computer Engineering • IEEE MET CSC Chairman</small>
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <!-- Hero Text -->
+        <div class="hero-content reveal-on-scroll reveal-left">
+          <!-- ===== SAKR MAKES BRAND SHOWCASE (Futuristic Tag Design) ===== -->
+          <div class="brand-showcase-new">
+            <div class="brand-logo-glow"></div>
+            <div class="brand-corner brand-corner-tl"></div>
+            <div class="brand-corner brand-corner-tr"></div>
+            <div class="brand-corner brand-corner-bl"></div>
+            <div class="brand-corner brand-corner-br"></div>
+            <div class="brand-content-wrap">
+              <div class="brand-icon-new brand-logo-container">
+                <img src="Logo.jpeg" alt="Sakr Makes Logo" class="brand-logo-img">
+                <div class="brand-icon-sub"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              </div>
+              <div class="brand-details">
+                <div class="brand-header-row">
+                  <span class="brand-name-new">Sakr Makes</span>
+                  <span class="brand-by-new">by Mohamed Sakr</span>
+                </div>
+                <span class="brand-tagline-new">Engineering ideas into reality</span>
+              </div>
+              <div class="brand-status">
+                <span class="status-dot"></span>
+                <span class="status-text">MAKER LAB // ACTIVE</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="meta-grid">
-          <div class="meta">
-            <div class="label">Founder</div>
-            <div class="value">Mohamed Sakr</div>
-            <small>Founder of Sakr Makes • Computer Engineering</small>
+          <h1 class="hero-title">
+            Hi, I'm <span class="name-gradient">Mohamed Sakr</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="subtitle-badge"><i class="fa-solid fa-crown"></i> Mohamed Sakr — Founder of Sakr Makes</span>
+            <span class="subtitle-role">I am a <span id="typing-text"></span><span class="cursor">|</span></span>
+          </h2>
+          <p class="hero-description" id="hero-bio">
+            I'm a Computer Engineering student and the founder of Sakr Makes, with a strong passion for artificial intelligence, machine learning, and physical engineering. I design smart algorithms and build hands-on maker projects that connect code with reality.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#projects-section" class="btn btn-primary">
+              <span>Explore My Lab</span>
+              <i class="fa-solid fa-microchip"></i>
+            </a>
+            <a href="#links-section" class="btn btn-secondary">
+              <span>Connect on Hub</span>
+              <i class="fa-solid fa-link"></i>
+            </a>
           </div>
-          <div class="meta">
-            <div class="label">Title</div>
-            <div class="value">Founder of Sakr Makes | Computer Engineering Student | IEEE MET CSC Chairman</div>
-          </div>
-          <div class="meta">
-            <div class="label">Links</div>
-            <div class="value">
-              <a href="https://youtube.com/@sakrmakes" rel="noopener" target="_blank">YouTube</a>
-              <span class="mono"> • </span>
-              <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" rel="noopener" target="_blank">LinkedIn</a>
+
+          <!-- Hero Social Connections -->
+          <div class="social-bar">
+            <span class="social-bar-label">Link:</span>
+            <div class="social-icons" id="hero-socials">
+              <!-- Loaded dynamically from data.json -->
             </div>
           </div>
         </div>
 
-        <div class="hr"></div>
+        <!-- Hero Graphic (Concentric Circular HUD & Profile Photo) -->
+        <div class="hero-graphic reveal-on-scroll reveal-right">
+          <div class="profile-circle-wrapper" id="profile-circle-wrapper">
+            <!-- Concentric HUD rings -->
+            <div class="hud-ring hud-ring-outer"></div>
+            <div class="hud-ring hud-ring-ticks"></div>
+            <div class="hud-ring hud-ring-dashed"></div>
+            <div class="hud-ring hud-ring-scan"></div>
+            <div class="hud-ring hud-ring-grid"></div>
+            
+            <div class="profile-circle-glow"></div>
+            
+            <!-- Circular Profile Photo Container -->
+            <div class="profile-circle-container">
+              <img src="Mohamed Sakr.png" alt="Mohamed Sakr — Founder of Sakr Makes" class="profile-circle-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Why Sakr Makes Exists</h2>
-        <p>
-          <strong>Sakr Makes</strong> was founded by <strong>Mohamed Sakr</strong> to bridge the gap between “learning engineering” and
-          “shipping engineering.” The platform emphasizes reusable systems, clean documentation, and a public record of
-          execution—so Google and users can consistently associate <strong>Mohamed Sakr</strong> as the founder behind <strong>Sakr Makes</strong>.
+    <!-- Experience Section -->
+    <section id="experience-section" class="experience-section">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">My <span class="accent-text">Experience</span></h2>
+        <p class="section-subtitle">Professional milestones of Mohamed Sakr, including founding Sakr Makes and leading student engineering initiatives.</p>
+      </div>
+      <div class="experience-timeline reveal-on-scroll" id="experience-timeline">
+        <!-- Loaded dynamically -->
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Experience...
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section id="projects-section" class="projects-section">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">My <span class="accent-text">Projects</span></h2>
+        <p class="section-subtitle">A showcase of advanced engineering projects developed by Mohamed Sakr under the Sakr Makes brand, bridging software and hardware.</p>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="Robotics & Hardware">Robotics & Hardware</button>
+        <button class="filter-btn" data-filter="AI & Software">AI & Software</button>
+        <button class="filter-btn" data-filter="Web Dev">Web Dev</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Loaded dynamically from data.json -->
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Projects...
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications-section" class="certifications-section">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">Licenses & <span class="accent-text">Certifications</span></h2>
+        <p class="section-subtitle">Professional certifications and academic qualifications earned by Mohamed Sakr, validating his engineering expertise.</p>
+      </div>
+      <div class="certifications-grid reveal-on-scroll" id="certifications-grid">
+        <!-- Loaded dynamically -->
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Certifications...
+        </div>
+      </div>
+    </section>
+
+    <!-- Links Hub / Social Directory Section -->
+    <section id="links-section" class="links-section">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">Sakr Makes <span class="accent-text">Hub</span></h2>
+        <p class="section-subtitle">Connect with Mohamed Sakr, Founder of Sakr Makes, across official channels, developer hubs, and builder profiles.</p>
+      </div>
+      <div class="links-grid reveal-on-scroll" id="links-grid">
+        <!-- Loaded dynamically from data.json -->
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Links Hub...
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed About & Leadership Section -->
+    <section id="about-section" class="about-section">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">About & <span class="accent-text">Leadership</span></h2>
+        <p class="section-subtitle">Explore the creator brand, campus leadership, and engineering foundations of Mohamed Sakr.</p>
+      </div>
+      <div class="about-grid reveal-on-scroll">
+        <!-- Sakr Makes Card -->
+        <div class="about-card brand-card">
+          <div class="about-card-glow"></div>
+          <div class="about-card-header">
+            <div class="about-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div class="about-card-titles">
+              <h3>Sakr Makes</h3>
+              <span class="card-role">Mohamed Sakr — Founder of Sakr Makes</span>
+            </div>
+          </div>
+          <p class="card-desc">Sakr Makes by Mohamed Sakr is a creative maker brand exploring the intersection of digital design, 3D printing fabrication, and smart hardware systems. As the founder, I lead all research, mechanical design, and electronic integration.</p>
+          <ul class="about-list">
+            <li>
+              <i class="fa-solid fa-cube list-icon"></i>
+              <span><strong>Fusion 360</strong> — Modeling functional structural enclosures and mechanical fittings.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-layer-group list-icon"></i>
+              <span><strong>3D Printing</strong> — Operating hardware slicing controls, fine-tuning tolerances, and assemblies.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-microchip list-icon"></i>
+              <span><strong>Prototyping</strong> — Wiring mechanical parts with controllers, battery modules, and sensor inputs.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IEEE leadership Card -->
+        <div class="about-card leadership-card">
+          <div class="about-card-glow"></div>
+          <div class="about-card-header">
+            <div class="about-card-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="about-card-titles">
+              <h3>IEEE MET CSC</h3>
+              <span class="card-role">Vice Chairman</span>
+            </div>
+          </div>
+          <p class="card-desc">IEEE MET CSC is the official IEEE Computer Society Chapter at MET Academy, Egypt. Together, we empower students through modern engineering methodologies and hands-on skill development.</p>
+          <ul class="about-list">
+            <li>
+              <i class="fa-solid fa-diagram-project list-icon"></i>
+              <span>Coordinating workflows and project timelines between tech and logistical committees.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-chalkboard-user list-icon"></i>
+              <span>Running workshops, interactive training bootcamps, and developer competitions.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-handshake list-icon"></i>
+              <span>Fostering peer-to-peer coding and AI learning circles.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-award list-icon"></i>
+              <span>Cultivating leadership, community organizing, and collaboration skills.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skills Summary Card -->
+        <div class="about-card skills-card">
+          <div class="about-card-glow"></div>
+          <div class="about-card-header">
+            <div class="about-card-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="about-card-titles">
+              <h3>Skills & Core</h3>
+              <span class="card-role">Tech Competencies</span>
+            </div>
+          </div>
+          
+          <div class="skills-block">
+            <h4 class="skills-block-title">AI & Machine Learning</h4>
+            <div class="skills-tags mini-tags">
+              <span class="tag active-tag"><i class="fa-solid fa-check"></i> Python & ML Analysis</span>
+              <span class="tag active-tag"><i class="fa-solid fa-check"></i> Supervised & Unsupervised</span>
+              <span class="tag learning-tag"><i class="fa-solid fa-arrows-spin fa-spin"></i> Deep Learning</span>
+              <span class="tag learning-tag"><i class="fa-solid fa-arrows-spin fa-spin"></i> LLMs & Transformers</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h4 class="skills-block-title">Languages & Tools</h4>
+            <div class="skills-tags mini-tags">
+              <span class="tag">C++</span>
+              <span class="tag">C</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h4 class="skills-block-title">Core Strengths</h4>
+            <div class="skills-tags mini-tags">
+              <span class="tag strength-tag">DSA</span>
+              <span class="tag strength-tag">OOP</span>
+              <span class="tag strength-tag">Problem Solving</span>
+              <span class="tag strength-tag">Code Debugging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- Decorative top glow line -->
+    <div class="footer-glow-line"></div>
+
+    <div class="footer-inner">
+
+      <!-- ── Brand Column ── -->
+      <div class="footer-col footer-brand">
+        <a href="#" class="footer-logo">
+          <img src="Logo.jpeg" alt="Sakr Makes Logo" class="footer-logo-img">
+          <span class="footer-logo-text">Sakr<span class="footer-logo-accent">Makes</span></span>
+        </a>
+        <p class="footer-brand-desc">
+          Engineering ideas into reality — AI, ML, hardware prototyping, and creative maker projects by Mohamed Sakr.
         </p>
+        <div class="footer-status-pill">
+          <span class="footer-status-dot"></span>
+          <span>MAKER LAB // ACTIVE</span>
+        </div>
+      </div>
 
-        <a class="btn" href="/contact.html">Open all official links</a>
-      </aside>
-    </div>
-  </section>
-</main>
+      <!-- ── Navigation Column ── -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigate</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#" class="footer-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#experience-section" class="footer-nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+          <li><a href="#projects-section" class="footer-nav-link"><i class="fa-solid fa-microchip"></i> Projects</a></li>
+          <li><a href="#certifications-section" class="footer-nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+          <li><a href="#links-section" class="footer-nav-link"><i class="fa-solid fa-link"></i> Links Hub</a></li>
+          <li><a href="#about-section" class="footer-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+        </ul>
+      </div>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <strong>Sakr Makes</strong><br />
-      <small>Sakr Makes is a technology and engineering platform founded by MohamedSakr.</small>
-    </div>
-    <div>
-      <small>
-        <a href="/about.html">About</a> •
-        <a href="/projects.html">Projects</a> •
-        <a href="/contact.html">Contact</a>
-      </small>
-    </div>
-    <div>
-      <small>
-        Founder: <strong>Mohamed Sakr</strong><br />
-        <a href="https://youtube.com/@sakrmakes" rel="noopener" target="_blank">YouTube</a> •
-        <a href="https://www.linkedin.com/in/mohamed-sakr-15b674279" rel="noopener" target="_blank">LinkedIn</a>
-      </small>
-    </div>
-  </div>
-</footer>
+      <!-- ── Connect Column ── -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Connect</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://github.com/M0hamedSakr" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mohamed-sakr-15b674279/" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/sakr.makes/" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.youtube.com/@SAKRMAKES" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@sakr_makes" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+          <li><a href="https://www.facebook.com/sakr.makes" target="_blank" rel="noopener" class="footer-nav-link"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+        </ul>
+      </div>
 
-<script src="/assets/js/main.js" defer></script>
+      <!-- ── Highlight Column ── -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Highlights</h4>
+        <div class="footer-highlights">
+          <div class="footer-highlight-card">
+            <i class="fa-solid fa-screwdriver-wrench footer-highlight-icon"></i>
+            <div>
+              <span class="footer-highlight-title">Sakr Makes</span>
+              <span class="footer-highlight-sub">Founder & Creator</span>
+            </div>
+          </div>
+          <div class="footer-highlight-card">
+            <i class="fa-solid fa-users footer-highlight-icon"></i>
+            <div>
+              <span class="footer-highlight-title">IEEE MET CSC</span>
+              <span class="footer-highlight-sub">Vice Chairman</span>
+            </div>
+          </div>
+          <div class="footer-highlight-card">
+            <i class="fa-solid fa-brain footer-highlight-icon"></i>
+            <div>
+              <span class="footer-highlight-title">AI & ML</span>
+              <span class="footer-highlight-sub">Engineer & Researcher</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Sakr Makes",
-      "url": "https://yourdomain.com",
-      "logo": "https://yourdomain.com/images/sakr-makes-logo.png",
-      "founder": { "@type": "Person", "name": "Mohamed Sakr" },
-      "sameAs": [
-        "https://youtube.com/@sakrmakes",
-        "https://www.linkedin.com/in/mohamed-sakr-15b674279"
-      ]
-    },
-    {
-      "@type": "Person",
-      "name": "Mohamed Sakr",
-      "jobTitle": "Founder of Sakr Makes",
-      "worksFor": { "@type": "Organization", "name": "Sakr Makes" },
-      "sameAs": [
-        "https://www.linkedin.com/in/mohamed-sakr-15b674279",
-        "https://youtube.com/@sakrmakes"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "name": "Sakr Makes",
-      "url": "https://yourdomain.com",
-      "publisher": { "@type": "Organization", "name": "Sakr Makes" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type":"ListItem", "position": 1, "name":"Home", "item":"https://yourdomain.com/" }
-      ]
-    }
-  ]
-}
-</script>
+    </div>
+
+    <!-- ── Bottom Bar ── -->
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="year"></span> <strong>Sakr Makes</strong> by Mohamed Sakr. All rights reserved.
+      </p>
+      <p class="footer-made-with">
+        Crafted with <i class="fa-solid fa-heart footer-heart"></i> &amp; <i class="fa-solid fa-microchip"></i> by <strong>Mohamed Sakr</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
