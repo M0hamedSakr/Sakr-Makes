@@ -71,7 +71,7 @@ Full-screen landing with animated brand showcase card, typing effect, interactiv
 
 ### 💼 Experience
 Professional timeline including:
-- **Founder** — Sakr Makes *(Freelance, Dec 2025 – Present)*
+- **Founder** — Sakr Makes *(Content Creation & Engineering, Dec 2025 – Present)*
 - **Vice Chair** — IEEE MET CSC *(Part-time, Sep 2025 – Present)*
 - **IT Support Specialist** — Let's Know Training Center *(Internship, Jan–Jun 2025)*
 
