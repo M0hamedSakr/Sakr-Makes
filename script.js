@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "id": "sakr-makes-founder",
         "title": "Founder",
         "organization": "Sakr Makes",
-        "type": "Freelance",
+        "type": "Content Creation & Engineering",
         "startDate": "Dec 2025",
         "endDate": "Present",
         "duration": "6 mos",
