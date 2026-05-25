@@ -80,13 +80,19 @@
       "id": "sakr-makes-founder",
       "title": "Founder",
       "organization": "Sakr Makes",
-      "type": "Freelance",
+      "type": "Content Creator",
       "startDate": "Dec 2025",
       "endDate": "Present",
       "duration": "6 mos",
-      "location": "Egypt",
+      "location": "El Mansoura, Ad Daqahliyah, Egypt",
       "description": "Founded and lead Sakr Makes by Mohamed Sakr — bringing ideas to life through AI development, 3D printing, Fusion 360 mechanical modeling, and hardware prototyping.",
-      "skills": ["Engineering", "AI", "3D Printing", "Fusion 360", "Content Creation"],
+      "skills": [
+        "Engineering",
+        "AI",
+        "3D Printing",
+        "Fusion 360",
+        "Content Creation"
+      ],
       "icon": "fa-solid fa-screwdriver-wrench",
       "colorClass": "exp-accent"
     },
@@ -100,7 +106,12 @@
       "duration": "9 mos",
       "location": "El Mansoura, Ad Daqahliyah, Egypt",
       "description": "Leading IEEE MET Computer Society Chapter initiatives — coordinating technical and non-technical teams, organizing workshops, coding bootcamps, and developer competitions for students.",
-      "skills": ["Leadership", "Event Organization", "Community Building", "Team Coordination"],
+      "skills": [
+        "Leadership",
+        "Event Organization",
+        "Community Building",
+        "Team Coordination"
+      ],
       "icon": "fa-solid fa-users",
       "colorClass": "exp-pink"
     },
@@ -114,7 +125,13 @@
       "duration": "6 mos",
       "location": "El Mansoura, Ad Daqahliyah, Egypt",
       "description": "During this internship journey, I gained practical hands-on IT support and networking skills working with real enterprise systems and configurations.",
-      "skills": ["DHCP", "DNS", "Networking", "IT Support", "Systems Administration"],
+      "skills": [
+        "DHCP",
+        "DNS",
+        "Networking",
+        "IT Support",
+        "Systems Administration"
+      ],
       "icon": "fa-solid fa-server",
       "colorClass": "exp-secondary"
     }
@@ -216,22 +233,64 @@
   },
   "skills": {
     "languages": [
-      { "name": "C++", "logo": "cplusplus" },
-      { "name": "C", "logo": "c" },
-      { "name": "Python", "logo": "python" },
-      { "name": "Flask", "logo": "flask" },
-      { "name": "HTML5", "logo": "html5" },
-      { "name": "CSS3", "logo": "css3" },
-      { "name": "JavaScript", "logo": "javascript" },
-      { "name": "Git", "logo": "git" },
-      { "name": "GitHub", "logo": "github" }
+      {
+        "name": "C++",
+        "logo": "cplusplus"
+      },
+      {
+        "name": "C",
+        "logo": "c"
+      },
+      {
+        "name": "Python",
+        "logo": "python"
+      },
+      {
+        "name": "Flask",
+        "logo": "flask"
+      },
+      {
+        "name": "HTML5",
+        "logo": "html5"
+      },
+      {
+        "name": "CSS3",
+        "logo": "css3"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      },
+      {
+        "name": "Git",
+        "logo": "git"
+      },
+      {
+        "name": "GitHub",
+        "logo": "github"
+      }
     ],
     "ai_ml": [
-      { "name": "Python for Data Analysis & ML", "status": "Active" },
-      { "name": "Supervised & Unsupervised Learning", "status": "Active" },
-      { "name": "Model Evaluation & Data-driven Insights", "status": "Active" },
-      { "name": "Deep Learning & Neural Networks", "status": "Learning" },
-      { "name": "LLMs & Transformers", "status": "Learning" }
+      {
+        "name": "Python for Data Analysis & ML",
+        "status": "Active"
+      },
+      {
+        "name": "Supervised & Unsupervised Learning",
+        "status": "Active"
+      },
+      {
+        "name": "Model Evaluation & Data-driven Insights",
+        "status": "Active"
+      },
+      {
+        "name": "Deep Learning & Neural Networks",
+        "status": "Learning"
+      },
+      {
+        "name": "LLMs & Transformers",
+        "status": "Learning"
+      }
     ],
     "strengths": [
       "Data Structures & Algorithms",
@@ -254,7 +313,12 @@
         "Motor driver circuits",
         "ESP32-CAM (trash visual tracking)"
       ],
-      "skills": ["Arduino", "Autodesk Fusion", "ESP32-CAM", "Robotics"],
+      "skills": [
+        "Arduino",
+        "Autodesk Fusion",
+        "ESP32-CAM",
+        "Robotics"
+      ],
       "image": "fa-solid fa-robot",
       "photo": "1747401996748.jfif",
       "teamPhoto": "1748158090945.jfif"
@@ -271,7 +335,12 @@
         "QR Code generation engine",
         "Automated directory storage"
       ],
-      "skills": ["Python", "Tkinter", "Pandas", "Data Automation"],
+      "skills": [
+        "Python",
+        "Tkinter",
+        "Pandas",
+        "Data Automation"
+      ],
       "image": "fa-solid fa-qrcode"
     },
     {
@@ -286,7 +355,12 @@
         "Fusion 360 chassis modeling",
         "High-torque gear motors"
       ],
-      "skills": ["Arduino", "Autodesk Fusion", "Hardware Prototyping", "C++"],
+      "skills": [
+        "Arduino",
+        "Autodesk Fusion",
+        "Hardware Prototyping",
+        "C++"
+      ],
       "image": "fa-solid fa-car",
       "photo": "1746779083872.jfif",
       "detailPhoto": "1748158249134.jfif"
@@ -303,7 +377,12 @@
         "Twilio SMS gateway integration",
         "Schedule background polling thread"
       ],
-      "skills": ["Python", "Tkinter", "Twilio API", "Audio/SMS Alerters"],
+      "skills": [
+        "Python",
+        "Tkinter",
+        "Twilio API",
+        "Audio/SMS Alerters"
+      ],
       "image": "fa-solid fa-heart-pulse"
     },
     {
@@ -318,7 +397,12 @@
         "Interactive product showcase lists",
         "GitHub Pages automated deployment"
       ],
-      "skills": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive Design"
+      ],
       "image": "fa-solid fa-cart-shopping",
       "url": "https://m0hamedsakr.github.io/TRIAGO/",
       "github": "https://github.com/M0hamedSakr/TRIAGO"
@@ -335,7 +419,12 @@
         "Analog joystick steering handler",
         "Direct motor speed driver outputs"
       ],
-      "skills": ["Arduino", "Sensors", "Fall Detection", "Control Systems"],
+      "skills": [
+        "Arduino",
+        "Sensors",
+        "Fall Detection",
+        "Control Systems"
+      ],
       "image": "fa-solid fa-wheelchair",
       "photo": "1755630400893.jfif"
     }
