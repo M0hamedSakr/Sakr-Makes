@@ -134,25 +134,28 @@
 
   // ── Local Response Logic ───────────────────────────────────────────────────
   function generateLocalResponse(message) {
-    const text = message.toLowerCase();
+    let text = message.toLowerCase();
+    
+    // Normalize Arabic text to handle common typos and variations (أ/إ/ا, ة/ه, etc)
+    text = text.replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه').replace(/ي$/g, 'ى');
     
     if (!portfolioData) {
       return "أنا أحاول تحميل البيانات، يرجى المحاولة بعد قليل. (I'm still loading data, please try again).";
     }
 
     // Intent: Explicit Search (ابحث عن, search for)
-    const searchMatch = text.match(/(?:ابحث عن|ابحث|search for|find)\s+(.+)/);
+    const searchMatch = text.match(/(?:ابحث عن|دور على|ابحث|search for|find)\s+(.+)/);
     if (searchMatch && searchMatch[1]) {
       return searchPortfolio(searchMatch[1]);
     }
 
     // Intent: Contact
-    if (/(contact|email|تواصل|ايميل|رقم|whatsapp|واتس)/.test(text)) {
+    if (/(contact|email|تواصل|ايميل|رقم|whatsapp|واتس|تليفون|هاتف)/.test(text)) {
       return `You can contact Mohamed Sakr here:\n\n📧 Email: **mo.sakr1400@gmail.com**\n📱 WhatsApp: **+20 100 925 2592**\n\nHe is always open to new opportunities and interesting projects!`;
     }
 
     // Intent: Projects
-    if (/(project|مشاريع|portfolio)/.test(text)) {
+    if (/(project|مشروع|مشاريع|اعمال|portfolio)/.test(text)) {
       let response = `Here are some of Mohamed's awesome projects:\n\n`;
       const projects = portfolioData.projects || [];
       projects.slice(0, 3).forEach(p => {
@@ -163,7 +166,7 @@
     }
 
     // Intent: Skills
-    if (/(skill|tool|مهارات|تقنيات|programming|برمجة|لغات)/.test(text)) {
+    if (/(skill|tool|مهار|تقني|برمج|لغات|لغه|language)/.test(text)) {
       const skills = portfolioData.skills || {};
       let response = `Mohamed is highly skilled in AI and Hardware! Here is a summary:\n\n`;
       response += `**AI & ML:** ${(skills.ai_ml || []).map(s => s.name).join(', ')}\n`;
@@ -173,7 +176,7 @@
     }
 
     // Intent: Experience
-    if (/(experience|work|خبرة|عمل|شغل)/.test(text)) {
+    if (/(experience|work|خبر|عمل|شغل|وظي|سي في|cv)/.test(text)) {
       const exp = portfolioData.experience || [];
       let response = `Here is Mohamed's experience:\n\n`;
       exp.forEach(e => {
@@ -183,7 +186,7 @@
     }
 
     // Intent: Certifications
-    if (/(certif|شهادات|course|كورسات)/.test(text)) {
+    if (/(certif|شهاد|course|كورس|دبلوم)/.test(text)) {
       const certs = portfolioData.certifications || [];
       let response = `Mohamed has several certifications. Here are a few:\n\n`;
       certs.slice(0, 3).forEach(c => {
@@ -193,7 +196,7 @@
     }
 
     // Intent: Social Links
-    if (/(social|link|github|linkedin|روابط|مواقع)/.test(text)) {
+    if (/(social|link|github|linkedin|رابط|روابط|مواقع)/.test(text)) {
       const socials = portfolioData.socials || [];
       let response = `You can find Mohamed online at:\n\n`;
       socials.forEach(s => {
@@ -203,7 +206,7 @@
     }
 
     // Intent: YouTube / Videos
-    if (/(youtube|يوتيوب|فيديو|فيديوهات|قناة|video|channel)/.test(text)) {
+    if (/(youtube|يوتيوب|يوتوب|فيديو|قناه|video|channel)/.test(text)) {
       return `📺 **Sakr Makes Channel**\n\nمحمد لديه قناة رائعة على اليوتيوب باسم **Sakr Makes** يشارك فيها أحدث اختراعاته، الروبوتات، وتطبيقات الذكاء الاصطناعي بشكل عملي وممتع!\n\nيمكنك البحث عنها في يوتيوب لمشاهدة كل المشاريع التي يعمل عليها، ولا تنسَ دعم القناة بالاشتراك! 😉`;
     }
 
