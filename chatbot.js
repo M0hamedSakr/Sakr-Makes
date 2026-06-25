@@ -143,6 +143,13 @@
       return "أنا أحاول تحميل البيانات، يرجى المحاولة بعد قليل. (I'm still loading data, please try again).";
     }
 
+    // Intent: Google Search (جوجل)
+    const googleMatch = text.match(/(?:جوجل|google|نتايج|نتائج).*(?:عن|لـ|for)?\s*(sakr makes|صقر ميكس|محمد صقر|يوتيوب|المشاريع)/) || text.match(/(?:ابحث في جوجل عن|جوجل عن|google for)\s+(.+)/);
+    if (googleMatch || (text.includes('sakr makes') && text.includes('جوجل'))) {
+      const query = (googleMatch && googleMatch[1]) ? googleMatch[1] : 'Sakr Makes';
+      return `لقد جهزت لك بحثاً مباشراً في محرك جوجل عن **${query}**! 🌐\n\n[🔍 اضغط هنا لرؤية النتائج مباشرة من Google](https://www.google.com/search?q=${encodeURIComponent(query)})\n\n*(ملاحظة: المتصفحات تمنع البوتات من سحب نتائج جوجل مباشرة للأمان، لذلك جهزت لك هذا الرابط السريع!)*`;
+    }
+
     // Intent: Explicit Search (ابحث عن, search for)
     const searchMatch = text.match(/(?:ابحث عن|دور على|ابحث|search for|find)\s+(.+)/);
     if (searchMatch && searchMatch[1]) {
