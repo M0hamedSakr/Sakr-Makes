@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ======================================================
+       Sakr Makes — sitemap.xml
+       Site   : https://sakr-makes.vercel.app/
+       Owner  : Mohamed Sakr (محمد صقر)
+       Updated: 2026-07-10
+  ====================================================== -->
+
+  <!-- Homepage (root) -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakr-makes.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakr-makes.vercel.app/"/>
+  </url>
+
+  <!-- Experience Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#experience-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projects Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#projects-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3D Design Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#threed-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Gallery Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#gallery-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Certifications Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#certifications-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Links Hub Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#links-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Posts & Content Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#posts-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About & Leadership Section -->
+  <url>
+    <loc>https://sakr-makes.vercel.app/#about-section</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
