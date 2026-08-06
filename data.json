@@ -427,6 +427,50 @@
       ],
       "image": "fa-solid fa-wheelchair",
       "photo": "1755630400893.jfif"
+    },
+    {
+      "id": "carpentry-workshop",
+      "title": "Carpentry Workshop Management System",
+      "tagline": "Desktop App for Workshop Operations",
+      "category": "AI & Software",
+      "description": "A robust desktop application built with Python and PySide6 (Qt) to manage carpentry workshop operations. Streamlines daily tasks, tracks materials, and provides role-based access for managers, workers, and customers.",
+      "components": [
+        "PySide6 (Qt) modern dark-themed GUI",
+        "Microsoft SQL Server integration via pyodbc",
+        "Role-based access (Manager, Worker, Customer)",
+        "Inventory, order, and payment tracking modules"
+      ],
+      "skills": [
+        "Python",
+        "PySide6",
+        "SQL Server",
+        "GUI App"
+      ],
+      "image": "fa-solid fa-hammer",
+      "github": "https://github.com/M0hamedSakr/Carpentry-Workshop-Management-System",
+      "url": "https://www.youtube.com/watch?v=PpWlX_NkYYA",
+      "photo": "carpentry_demo.png"
+    },
+    {
+      "id": "nyc-taxi-predictor",
+      "title": "NYC Taxi Ride Duration Predictor",
+      "tagline": "Predictive AI Web App & Analytics",
+      "category": "AI & Software",
+      "description": "An end-to-end Machine Learning solution and interactive Streamlit web dashboard to estimate NYC taxi trip durations. Features a custom dark-mode aesthetic, live fare forecasting, geospatial routing, and interactive traffic simulations.",
+      "components": [
+        "Streamlit Web Application (Frontend UI)",
+        "Scikit-Learn ML Models (Linear Regression, Random Forest)",
+        "Plotly Mapbox for Geospatial Visualizations",
+        "Real-time Traffic Condition Simulation Slider"
+      ],
+      "skills": [
+        "Python",
+        "Streamlit",
+        "Scikit-Learn",
+        "Plotly"
+      ],
+      "image": "fa-solid fa-taxi",
+      "github": "https://github.com/M0hamedSakr/Trip_Duration"
     }
   ]
 }
