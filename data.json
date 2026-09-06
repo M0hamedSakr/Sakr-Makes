@@ -3,7 +3,7 @@
     "handle": "Mohamed Sakr",
     "title": "Founder of Sakr Makes — AI & ML Engineer",
     "bio": "I am Mohamed Sakr — Founder of Sakr Makes. As an AI engineer and developer, I create custom code, 3D designs, and hands-on hardware prototypes. Discover how machine learning meets physical engineering on Sakr Makes by Mohamed Sakr.",
-    "avatar": "Mohamed Sakr.png",
+    "avatar": "Mohamed Sakr.webp",
     "role": "Founder of Sakr Makes"
   },
   "socials": [
@@ -340,8 +340,7 @@
         "Robotics"
       ],
       "image": "fa-solid fa-robot",
-      "photo": "1747401996748.jfif",
-      "teamPhoto": "1748158090945.jfif"
+      "photo": "1747401996748.webp"
     },
     {
       "id": "generate-qrcode",
@@ -382,8 +381,7 @@
         "C++"
       ],
       "image": "fa-solid fa-car",
-      "photo": "1746779083872.jfif",
-      "detailPhoto": "1748158249134.jfif"
+      "photo": "1746779083872.webp"
     },
     {
       "id": "my-health",
@@ -446,7 +444,7 @@
         "Control Systems"
       ],
       "image": "fa-solid fa-wheelchair",
-      "photo": "1755630400893.jfif"
+      "photo": "1755630400893.webp"
     },
     {
       "id": "carpentry-workshop",
@@ -469,7 +467,7 @@
       "image": "fa-solid fa-hammer",
       "github": "https://github.com/M0hamedSakr/Carpentry-Workshop-Management-System",
       "url": "https://www.youtube.com/watch?v=PpWlX_NkYYA",
-      "photo": "carpentry_demo.png"
+      "photo": "carpentry_demo.webp"
     },
     {
       "id": "nyc-taxi-predictor",

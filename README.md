@@ -44,10 +44,10 @@ Sakr makes/
 ├── script.js           # All interactivity — canvas, intro, theme, data rendering
 ├── data.json           # Single source of truth for all dynamic content
 │
-├── Logo.jpeg           # Sakr Makes brand logo
-├── Mohamed Sakr.png    # Profile photo (hero section)
+├── Logo.webp           # Sakr Makes brand logo
+├── Mohamed Sakr.webp    # Profile photo (hero section)
 │
-└── *.jfif              # Project photos (Cleaner Robot, Mobile Car, Smart Wheelchair…)
+└── *.webp              # Project photos (Cleaner Robot, Mobile Car, Smart Wheelchair…)
 ```
 
 ---

@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "handle": "Mohamed Sakr",
       "title": "Founder of Sakr Makes — AI & ML Engineer",
       "bio": "I am Mohamed Sakr — Founder of Sakr Makes. As an AI engineer and developer, I create custom code, 3D designs, and hands-on hardware prototypes. Discover how machine learning meets physical engineering on Sakr Makes by Mohamed Sakr.",
-      "avatar": "Mohamed Sakr.png",
+      "avatar": "Mohamed Sakr.webp",
       "role": "Founder of Sakr Makes"
     },
     "socials": [
@@ -171,8 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "components": ["4 DC motors (differential locomotion)", "Conveyor belt lift mechanism", "Relay module controllers", "Motor driver circuits", "ESP32-CAM (trash visual tracking)"],
         "skills": ["Arduino", "Autodesk Fusion", "ESP32-CAM", "Robotics"],
         "image": "fa-solid fa-robot",
-        "photo": "1747401996748.jfif",
-        "teamPhoto": "1748158090945.jfif"
+        "photo": "1747401996748.webp"
       },
       {
         "id": "generate-qrcode",
@@ -193,8 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "components": ["Lifting scissor-jack mechanism", "Arduino microcontroller brain", "Fusion 360 chassis modeling", "High-torque gear motors"],
         "skills": ["Arduino", "Autodesk Fusion", "Hardware Prototyping", "C++"],
         "image": "fa-solid fa-car",
-        "photo": "1746779083872.jfif",
-        "detailPhoto": "1748158249134.jfif"
+        "photo": "1746779083872.webp"
       },
       {
         "id": "my-health",
@@ -227,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "components": ["Ultrasonic distance ranging arrays", "IMU sensor fall-detection algorithm", "Analog joystick steering handler", "Direct motor speed driver outputs"],
         "skills": ["Arduino", "Sensors", "Fall Detection", "Control Systems"],
         "image": "fa-solid fa-wheelchair",
-        "photo": "1755630400893.jfif"
+        "photo": "1755630400893.webp"
       }
     ]
   };
