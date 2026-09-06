@@ -1081,6 +1081,50 @@
     </div>
   </footer>
 
+  <!-- Scroll To Top Button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Back-to-Top Logic (inline, self-contained, guaranteed execution) -->
+  <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      if (!btn) return;
+
+      function getScrollTop() {
+        return window.pageYOffset
+          || document.documentElement.scrollTop
+          || document.body.scrollTop
+          || 0;
+      }
+
+      function onScroll() {
+        if (getScrollTop() > 300) {
+          btn.classList.add('show');
+        } else {
+          btn.classList.remove('show');
+        }
+      }
+
+      /* Listen on both — covers all browsers & scroll containers */
+      window.addEventListener('scroll', onScroll, { passive: true });
+      document.addEventListener('scroll', onScroll, { passive: true });
+
+      btn.addEventListener('click', function () {
+        /* Try native smooth scroll first, fall back to instant */
+        try {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } catch (e) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+      /* Run once immediately in case page loaded mid-scroll */
+      onScroll();
+    })();
+  </script>
+
   <!-- Custom JS -->
   <script src="script.js"></script>
 

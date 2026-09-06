@@ -135,6 +135,20 @@ document.addEventListener('DOMContentLoaded', () => {
         "skills": ["DHCP", "DNS", "Networking", "IT Support", "Systems Administration"],
         "icon": "fa-solid fa-server",
         "colorClass": "exp-secondary"
+      },
+      {
+        "id": "depi-ai-trainee",
+        "title": "AI & Machine Learning Trainee",
+        "organization": "Digital Egypt Pioneers Initiative - DEPI",
+        "type": "Training",
+        "startDate": "Jul 2026",
+        "endDate": "Present",
+        "duration": "3 mos",
+        "location": "El Mansoura, Ad Daqahliyah, Egypt · Hybrid",
+        "description": "Intensive AI & Machine Learning training program covering Python & Data Analysis, Machine Learning Algorithms, Generative AI & LLMs, and hands-on AI Projects under the Digital Egypt Pioneers Initiative.",
+        "skills": ["AI & ML Training", "Python", "Data Analysis", "Machine Learning", "Generative AI & LLMs"],
+        "icon": "fa-solid fa-brain",
+        "colorClass": "exp-green"
       }
     ],
     "certifications": [
@@ -949,4 +963,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initGalleryLightbox();
+
 });
