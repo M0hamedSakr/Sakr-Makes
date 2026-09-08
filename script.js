@@ -412,128 +412,143 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------
-     PROJECTS RENDERER
+     PROJECTS RENDERER — Compact List-Row with Expandable Detail Panel
   ------------------------------------------------------------------ */
   function renderProjects(projects) {
     projectsGrid.innerHTML = '';
-    projects.forEach(project => {
-      const card = document.createElement('div');
-      card.className = 'project-card';
-      card.setAttribute('data-category', project.category);
 
-      // --- Build photos array (main + team + detail) ---
+    projects.forEach(project => {
+      const item = document.createElement('div');
+      item.className = 'project-row';
+      item.setAttribute('data-category', project.category);
+
+      // Build skill tags (compact, shown in row)
+      const skillsRow = (project.skills || [])
+        .map(s => `<span class="project-skill-tag">${s}</span>`).join('');
+
+      // Build detail panel photo gallery
       const photos = [];
       if (project.photo)       photos.push({ src: project.photo,       label: 'Design' });
       if (project.teamPhoto)   photos.push({ src: project.teamPhoto,   label: 'Team'   });
       if (project.detailPhoto) photos.push({ src: project.detailPhoto, label: 'Detail' });
       if (project.gallery)     photos.push(...project.gallery);
 
-      // --- Photo banner with optional gallery tabs ---
-      let photoHTML = '';
-      if (photos.length > 0) {
-        const thumbsHTML = photos.length > 1
-          ? `<div class="photo-thumbs">${photos.map((p, i) =>
-              `<button class="photo-thumb${i === 0 ? ' active' : ''}" data-src="${p.src}">${p.label}</button>`
-            ).join('')}</div>`
-          : '';
-        photoHTML = `
-          <div class="project-photo-banner">
-            <img src="${photos[0].src}" alt="${project.title} project photo" loading="lazy" class="gallery-main-img">
-            <div class="project-photo-overlay">
-              <div class="photo-overlay-bottom">
-                <span class="project-category-badge">${project.category}</span>
-                ${thumbsHTML}
-              </div>
+      const thumbsHTML = photos.length > 1
+        ? `<div class="photo-thumbs">${photos.map((p, i) =>
+            `<button class="photo-thumb${i === 0 ? ' active' : ''}" data-src="${p.src}">${p.label}</button>`
+          ).join('')}</div>`
+        : '';
+
+      const galleryHTML = photos.length > 0
+        ? `<div class="proj-detail-gallery">
+            <img src="${photos[0].src}" alt="${project.title}" loading="lazy" class="gallery-main-img proj-gallery-img">
+            <div class="proj-gallery-overlay">
+              <span class="project-category-badge">${project.category}</span>
+              ${thumbsHTML}
             </div>
-          </div>`;
-      }
+           </div>`
+        : '';
 
-      // --- Components list ---
-      let componentsHTML = '';
-      if (project.components && project.components.length > 0) {
-        componentsHTML = `
-          <div class="project-features">
-            <h5 class="project-features-title">Main Components</h5>
-            <ul class="project-features-list">
-              ${project.components.map(comp => `<li>${comp}</li>`).join('')}
-            </ul>
-          </div>`;
-      }
+      // Components list
+      const componentsHTML = (project.components || []).length > 0
+        ? `<ul class="proj-detail-list">
+            ${project.components.map(c => `<li><i class="fa-solid fa-check"></i>${c}</li>`).join('')}
+           </ul>`
+        : '';
 
-      // --- Skill tags ---
-      let skillsHTML = '';
-      if (project.skills && project.skills.length > 0) {
-        skillsHTML = `
-          <div class="project-skills">
-            ${project.skills.map(skill => `<span class="project-skill-tag">${skill}</span>`).join('')}
-          </div>`;
-      }
-
-      // --- Footer links (Live Demo + GitHub) ---
+      // Footer links
       const footerLinks = [];
-      if (project.url) {
-        footerLinks.push(`<a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Live Demo</span></a>`);
-      }
-      if (project.github) {
-        footerLinks.push(`<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fa-brands fa-github"></i><span>GitHub</span></a>`);
-      }
+      if (project.url)    footerLinks.push(`<a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Live Demo</span></a>`);
+      if (project.github) footerLinks.push(`<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fa-brands fa-github"></i><span>GitHub</span></a>`);
       const footerHTML = footerLinks.length > 0
         ? `<div class="project-card-footer">${footerLinks.join('')}</div>` : '';
 
-      // Category badge in header only when no photo (photo already has it in overlay)
-      const categoryBadge = photos.length === 0
-        ? `<span class="project-category">${project.category}</span>` : '';
-
-      card.innerHTML = `
-        ${photoHTML}
-        <div class="project-card-body">
-          <div class="project-card-header">
+      item.innerHTML = `
+        <!-- ── Compact summary row ── -->
+        <div class="proj-row-summary">
+          <div class="proj-row-left">
             <div class="project-icon-box">
               <i class="${project.image || 'fa-solid fa-gears'}"></i>
             </div>
-            <div class="project-header-text">
-              <h4 class="project-title">${project.title}</h4>
-              ${categoryBadge}
+            <div class="proj-row-info">
+              <span class="project-title">${project.title}</span>
+              <span class="project-tagline">${project.tagline}</span>
             </div>
           </div>
-          <p class="project-tagline">${project.tagline}</p>
-          <p class="project-desc">${project.description}</p>
-          ${componentsHTML}
-          ${skillsHTML}
-          ${footerHTML}
-        </div>`;
+          <div class="proj-row-right">
+            <span class="project-category-pill">${project.category}</span>
+            <div class="proj-row-skills">${skillsRow}</div>
+            <button class="proj-expand-btn" aria-label="Toggle details">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
 
-      // --- Photo gallery tab switcher ---
+        <!-- ── Expandable detail panel ── -->
+        <div class="proj-detail-panel">
+          <div class="proj-detail-inner">
+            ${galleryHTML}
+            <div class="proj-detail-content">
+              <p class="project-desc">${project.description}</p>
+              ${componentsHTML}
+              ${footerHTML}
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Toggle expand / collapse
+      const summary  = item.querySelector('.proj-row-summary');
+      const panel    = item.querySelector('.proj-detail-panel');
+      const expandBtn = item.querySelector('.proj-expand-btn');
+
+      summary.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('expanded');
+        panel.style.maxHeight = isOpen ? panel.scrollHeight + 'px' : '0';
+        // Re-measure after image might have loaded
+        if (isOpen) {
+          setTimeout(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; }, 200);
+        }
+      });
+
+      // Prevent link/button clicks from bubbling to toggle
+      panel.querySelectorAll('a, button:not(.proj-expand-btn), .photo-thumb').forEach(el => {
+        el.addEventListener('click', e => e.stopPropagation());
+      });
+
+      // Photo gallery tab switcher
       if (photos.length > 1) {
-        const mainImg = card.querySelector('.gallery-main-img');
-        card.querySelectorAll('.photo-thumb').forEach(thumb => {
+        const mainImg = item.querySelector('.proj-gallery-img');
+        item.querySelectorAll('.photo-thumb').forEach(thumb => {
           thumb.addEventListener('click', (e) => {
             e.stopPropagation();
             mainImg.style.opacity = '0';
             setTimeout(() => {
               mainImg.src = thumb.getAttribute('data-src');
               mainImg.style.opacity = '1';
+              // Recalculate panel height after image swap
+              setTimeout(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; }, 50);
             }, 200);
-            card.querySelectorAll('.photo-thumb').forEach(t => t.classList.remove('active'));
+            item.querySelectorAll('.photo-thumb').forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
           });
         });
       }
 
-      // --- Spotlight tracking effect ---
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      // Spotlight mouse-track on summary row
+      summary.addEventListener('mousemove', (e) => {
+        const rect = summary.getBoundingClientRect();
+        summary.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        summary.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
       });
 
-      projectsGrid.appendChild(card);
+      projectsGrid.appendChild(item);
     });
   }
 
   function setupProjectsFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const getProjectCards = () => document.querySelectorAll('.project-card');
+    const getProjectRows = () => document.querySelectorAll('.project-row');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -541,18 +556,18 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         const activeFilter = btn.getAttribute('data-filter');
 
-        getProjectCards().forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (activeFilter === 'all' || cardCategory === activeFilter) {
-            card.style.display = 'flex';
+        getProjectRows().forEach(row => {
+          const rowCategory = row.getAttribute('data-category');
+          if (activeFilter === 'all' || rowCategory === activeFilter) {
+            row.style.display = 'block';
             setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
+              row.style.opacity = '1';
+              row.style.transform = 'translateY(0)';
             }, 10);
           } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
-            setTimeout(() => { card.style.display = 'none'; }, 300);
+            row.style.opacity = '0';
+            row.style.transform = 'translateY(10px)';
+            setTimeout(() => { row.style.display = 'none'; }, 300);
           }
         });
       });
