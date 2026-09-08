@@ -492,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (photos.length > 1) {
           modalThumbstrip.innerHTML = photos.map((p, i) =>
             `<button class="modal-thumb${i === 0 ? ' active' : ''}" data-src="${p.src}" title="${p.label}">
-              <img src="${p.src}" alt="${p.label}" loading="lazy">
+              <img src="${p.src}" alt="${p.label}" loading="lazy" width="200" height="150">
               <span>${p.label}</span>
             </button>`
           ).join('');
@@ -600,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Visual preview -->
         <div class="tile-preview">
           ${hasImage
-            ? `<img src="${previewSrc}" alt="${project.title}" loading="lazy" class="tile-preview-img">`
+            ? `<img src="${previewSrc}" alt="${project.title}" loading="lazy" class="tile-preview-img" width="400" height="300">`
             : `<div class="tile-preview-icon"><i class="${project.image || 'fa-solid fa-gears'}"></i></div>`
           }
           <!-- Hover reveal overlay -->
@@ -850,7 +850,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function init() {
       particles = [];
-      particleCount = window.innerWidth < 600 ? 30 : window.innerWidth < 1200 ? 55 : 80;
+      particleCount = window.innerWidth < 768 ? 0 : window.innerWidth < 1200 ? 55 : 80;
       for (let i = 0; i < particleCount; i++) particles.push(new Particle());
     }
 
