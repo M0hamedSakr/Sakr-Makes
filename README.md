@@ -28,6 +28,7 @@ The site is built with **pure HTML, CSS & JavaScript** (no frameworks), featurin
 | 🖼️ **HUD Profile Ring** | Concentric holographic rings with radar sweep around the profile photo |
 | 📱 **Fully Responsive** | Mobile-first design with hamburger navigation |
 | 🔍 **Project Filter** | Category-based filtering (Robotics, AI & Software, Web Dev) |
+| 🎨 **Grid & Modal UI** | Responsive project tiles with image previews and full-screen detailed modal galleries |
 | 📊 **Data-Driven** | All content loaded dynamically from `data.json` with offline fallback |
 | 🎯 **SEO Optimized** | Open Graph, Twitter Cards, JSON-LD Schema.org structured data |
 | ✨ **Micro-Animations** | Hover effects, scroll-reveal animations, 3D tilt on profile photo |
@@ -76,15 +77,16 @@ Professional timeline including:
 - **IT Support Specialist** — Let's Know Training Center *(Internship, Jan–Jun 2025)*
 
 ### 🧪 Projects
-Filterable showcase of 6 projects across 3 categories:
+Filterable showcase of 11 projects across 3 categories:
 
 | Project | Category | Key Tech |
 |---|---|---|
 | 🤖 Cleaner Robot | Robotics & Hardware | Arduino, ESP32-CAM, Fusion 360 |
-| 📱 Generate QRCode | AI & Software | Python, Tkinter, Pandas |
 | 🚗 Mobile Car | Robotics & Hardware | Arduino, Fusion 360, C++ |
 | 💊 My Health | AI & Software | Python, Twilio API, Tkinter |
-| 🛒 TRIAGO | Web Dev | HTML5, CSS3, JavaScript |
+| 🛒 PEPTIA | Web Dev | HTML5, CSS3, JS, E-commerce |
+| 🚕 NYC Taxi Predictor | AI & Software | Python, Streamlit, Scikit-Learn |
+| 🪚 Carpentry Workshop | AI & Software | Python, PySide6, SQL Server |
 | ♿ Smart Wheelchair | Robotics & Hardware | Arduino, Sensors, IMU |
 
 ### 🏆 Certifications

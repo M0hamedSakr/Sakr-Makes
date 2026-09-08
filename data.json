@@ -401,7 +401,8 @@
         "Twilio API",
         "Audio/SMS Alerters"
       ],
-      "image": "fa-solid fa-heart-pulse"
+      "image": "fa-solid fa-heart-pulse",
+      "photo": "my-health.webp"
     },
     {
       "id": "triago",
@@ -422,6 +423,7 @@
         "Responsive Design"
       ],
       "image": "fa-solid fa-cart-shopping",
+      "photo": "triago.webp",
       "url": "https://m0hamedsakr.github.io/TRIAGO/",
       "github": "https://github.com/M0hamedSakr/TRIAGO"
     },
@@ -516,6 +518,28 @@
         { "src": "travel-events-planner3.webp", "label": "Dashboard" },
         { "src": "travel-events-planner4.webp", "label": "Map" }
       ]
+    },
+    {
+      "id": "peptia",
+      "title": "PEPTIA - Engineered for Performance",
+      "tagline": "Performance-Focused E-commerce Platform",
+      "category": "Web Dev",
+      "description": "PEPTIA is a performance-focused e-commerce platform and landing page designed for athletes who take their training seriously. This repository contains the front-end code for the main landing page, product showcase, and the administrative dashboard.",
+      "components": [
+        "Dynamic Product Loading via JSON",
+        "WhatsApp Integration for direct ordering",
+        "Administrative Dashboard (Stock & Pricing)",
+        "AI Chatbot Interface"
+      ],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "E-commerce"
+      ],
+      "image": "fa-solid fa-dumbbell",
+      "photo": "peptia.webp",
+      "url": "https://peptia-mu.vercel.app/"
     },
     {
       "id": "titanic-survival",

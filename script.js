@@ -202,7 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "description": "A GUI scheduler designed to help patients manage and adhere to medication times. Users log medications and reminder timings, triggering immediate speaker audio tones and Twilio phone SMS notifications.",
         "components": ["Tkinter prescription GUI", "Playsound audio playback triggers", "Twilio SMS gateway integration", "Schedule background polling thread"],
         "skills": ["Python", "Tkinter", "Twilio API", "Audio/SMS Alerters"],
-        "image": "fa-solid fa-heart-pulse"
+        "image": "fa-solid fa-heart-pulse",
+        "photo": "my-health.webp"
       },
       {
         "id": "triago",
@@ -213,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "components": ["HTML5 layout scaffolding", "Vanilla CSS variables & grid structure", "Interactive product showcase lists", "GitHub Pages automated deployment"],
         "skills": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
         "image": "fa-solid fa-cart-shopping",
+        "photo": "triago.webp",
         "url": "https://m0hamedsakr.github.io/TRIAGO/",
         "github": "https://github.com/M0hamedSakr/TRIAGO"
       },
@@ -226,6 +228,30 @@ document.addEventListener('DOMContentLoaded', () => {
         "skills": ["Arduino", "Sensors", "Fall Detection", "Control Systems"],
         "image": "fa-solid fa-wheelchair",
         "photo": "1755630400893.webp"
+      },
+      {
+        "id": "carpentry-workshop",
+        "title": "Carpentry Workshop Management System",
+        "tagline": "Desktop App for Workshop Operations",
+        "category": "AI & Software",
+        "description": "A robust desktop application built with Python and PySide6 (Qt) to manage carpentry workshop operations. Streamlines daily tasks, tracks materials, and provides role-based access for managers, workers, and customers.",
+        "components": ["PySide6 (Qt) modern dark-themed GUI", "Microsoft SQL Server integration via pyodbc", "Role-based access (Manager, Worker, Customer)", "Inventory, order, and payment tracking modules"],
+        "skills": ["Python", "PySide6", "SQL Server", "GUI App"],
+        "image": "fa-solid fa-hammer",
+        "github": "https://github.com/M0hamedSakr/Carpentry-Workshop-Management-System",
+        "url": "https://www.youtube.com/watch?v=PpWlX_NkYYA",
+        "photo": "carpentry_demo.webp"
+      },
+      {
+        "id": "nyc-taxi-predictor",
+        "title": "NYC Taxi Ride Duration Predictor",
+        "tagline": "Predictive AI Web App & Analytics",
+        "category": "AI & Software",
+        "description": "An end-to-end Machine Learning solution and interactive Streamlit web dashboard to estimate NYC taxi trip durations. Features a custom dark-mode aesthetic, live fare forecasting, geospatial routing, and interactive traffic simulations.",
+        "components": ["Streamlit Web Application (Frontend UI)", "Scikit-Learn ML Models (Linear Regression, Random Forest)", "Plotly Mapbox for Geospatial Visualizations", "Real-time Traffic Condition Simulation Slider"],
+        "skills": ["Python", "Streamlit", "Scikit-Learn", "Plotly"],
+        "image": "fa-solid fa-taxi",
+        "github": "https://github.com/M0hamedSakr/Trip_Duration"
       },
       {
         "id": "travel-planner",
@@ -242,6 +268,18 @@ document.addEventListener('DOMContentLoaded', () => {
           { "src": "travel-events-planner3.webp", "label": "Dashboard" },
           { "src": "travel-events-planner4.webp", "label": "Map" }
         ]
+      },
+      {
+        "id": "peptia",
+        "title": "PEPTIA - Engineered for Performance",
+        "tagline": "Performance-Focused E-commerce Platform",
+        "category": "Web Dev",
+        "description": "PEPTIA is a performance-focused e-commerce platform and landing page designed for athletes who take their training seriously. This repository contains the front-end code for the main landing page, product showcase, and the administrative dashboard.",
+        "components": ["Dynamic Product Loading via JSON", "WhatsApp Integration for direct ordering", "Administrative Dashboard (Stock & Pricing)", "AI Chatbot Interface"],
+        "skills": ["HTML5", "CSS3", "JavaScript", "E-commerce"],
+        "image": "fa-solid fa-dumbbell",
+        "photo": "peptia.webp",
+        "url": "https://peptia-mu.vercel.app/"
       },
       {
         "id": "titanic-survival",
@@ -412,143 +450,199 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------
-     PROJECTS RENDERER — Compact List-Row with Expandable Detail Panel
+     PROJECTS RENDERER — Compact Visual Tiles + Modal Overlay
   ------------------------------------------------------------------ */
+
+  // ── Modal elements ──
+  const projectModal    = document.getElementById('project-modal');
+  const modalCloseBtn   = document.getElementById('modal-close-btn');
+  const modalBackdrop   = projectModal ? projectModal.querySelector('.project-modal-backdrop') : null;
+  const modalMainImg    = document.getElementById('modal-main-img');
+  const modalPlaceholder= document.getElementById('modal-gallery-placeholder');
+  const modalThumbstrip = document.getElementById('modal-thumbstrip');
+  const modalIcon       = document.getElementById('modal-icon');
+  const modalCategory   = document.getElementById('modal-category');
+  const modalTitle      = document.getElementById('modal-title');
+  const modalTagline    = document.getElementById('modal-tagline');
+  const modalDesc       = document.getElementById('modal-desc');
+  const modalSkills     = document.getElementById('modal-skills');
+  const modalComponentsWrap = document.getElementById('modal-components-wrap');
+  const modalComponentsList = document.getElementById('modal-components-list');
+  const modalLinks      = document.getElementById('modal-links');
+
+  function openProjectModal(project) {
+    if (!projectModal) return;
+
+    // Build photo array
+    const photos = [];
+    if (project.photo)       photos.push({ src: project.photo,       label: 'Design' });
+    if (project.teamPhoto)   photos.push({ src: project.teamPhoto,   label: 'Team'   });
+    if (project.detailPhoto) photos.push({ src: project.detailPhoto, label: 'Detail' });
+    if (project.gallery)     photos.push(...project.gallery);
+
+    // Gallery
+    if (photos.length > 0) {
+      modalMainImg.src = photos[0].src;
+      modalMainImg.alt = project.title;
+      modalMainImg.style.display = 'block';
+      if (modalPlaceholder) modalPlaceholder.style.display = 'none';
+
+      // Thumbnail strip
+      if (modalThumbstrip) {
+        if (photos.length > 1) {
+          modalThumbstrip.innerHTML = photos.map((p, i) =>
+            `<button class="modal-thumb${i === 0 ? ' active' : ''}" data-src="${p.src}" title="${p.label}">
+              <img src="${p.src}" alt="${p.label}" loading="lazy">
+              <span>${p.label}</span>
+            </button>`
+          ).join('');
+          modalThumbstrip.style.display = 'flex';
+
+          modalThumbstrip.querySelectorAll('.modal-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+              modalMainImg.style.opacity = '0';
+              setTimeout(() => {
+                modalMainImg.src = thumb.getAttribute('data-src');
+                modalMainImg.style.opacity = '1';
+              }, 180);
+              modalThumbstrip.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+              thumb.classList.add('active');
+            });
+          });
+        } else {
+          modalThumbstrip.innerHTML = '';
+          modalThumbstrip.style.display = 'none';
+        }
+      }
+    } else {
+      modalMainImg.style.display = 'none';
+      if (modalPlaceholder) {
+        modalPlaceholder.style.display = 'flex';
+        modalPlaceholder.querySelector('i').className = project.image || 'fa-solid fa-gears';
+      }
+      if (modalThumbstrip) { modalThumbstrip.innerHTML = ''; modalThumbstrip.style.display = 'none'; }
+    }
+
+    // Icon, category, title, tagline, desc
+    if (modalIcon)     modalIcon.className = project.image || 'fa-solid fa-gears';
+    if (modalCategory) modalCategory.textContent = project.category;
+    if (modalTitle)    modalTitle.textContent = project.title;
+    if (modalTagline)  modalTagline.textContent = project.tagline;
+    if (modalDesc)     modalDesc.textContent = project.description;
+
+    // Skills
+    if (modalSkills) {
+      modalSkills.innerHTML = (project.skills || [])
+        .map(s => `<span class="project-skill-tag">${s}</span>`).join('');
+    }
+
+    // Components
+    if (modalComponentsWrap && modalComponentsList) {
+      if ((project.components || []).length > 0) {
+        modalComponentsList.innerHTML = project.components
+          .map(c => `<li><i class="fa-solid fa-check-circle"></i>${c}</li>`).join('');
+        modalComponentsWrap.style.display = 'block';
+      } else {
+        modalComponentsWrap.style.display = 'none';
+      }
+    }
+
+    // Links
+    if (modalLinks) {
+      const links = [];
+      if (project.url)    links.push(`<a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Live Demo</span></a>`);
+      if (project.github) links.push(`<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fa-brands fa-github"></i><span>GitHub</span></a>`);
+      modalLinks.innerHTML = links.join('');
+    }
+
+    // Open modal
+    projectModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProjectModal() {
+    if (!projectModal) return;
+    projectModal.classList.remove('open');
+    document.body.style.overflow = '';
+    if (modalMainImg) modalMainImg.src = '';
+  }
+
+  // Close listeners
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeProjectModal);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeProjectModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProjectModal(); });
+
   function renderProjects(projects) {
     projectsGrid.innerHTML = '';
 
     projects.forEach(project => {
-      const item = document.createElement('div');
-      item.className = 'project-row';
-      item.setAttribute('data-category', project.category);
-
-      // Build skill tags (compact, shown in row)
-      const skillsRow = (project.skills || [])
-        .map(s => `<span class="project-skill-tag">${s}</span>`).join('');
-
-      // Build detail panel photo gallery
       const photos = [];
       if (project.photo)       photos.push({ src: project.photo,       label: 'Design' });
       if (project.teamPhoto)   photos.push({ src: project.teamPhoto,   label: 'Team'   });
       if (project.detailPhoto) photos.push({ src: project.detailPhoto, label: 'Detail' });
       if (project.gallery)     photos.push(...project.gallery);
 
-      const thumbsHTML = photos.length > 1
-        ? `<div class="photo-thumbs">${photos.map((p, i) =>
-            `<button class="photo-thumb${i === 0 ? ' active' : ''}" data-src="${p.src}">${p.label}</button>`
-          ).join('')}</div>`
-        : '';
+      const hasImage = photos.length > 0;
+      const previewSrc = hasImage ? photos[0].src : null;
 
-      const galleryHTML = photos.length > 0
-        ? `<div class="proj-detail-gallery">
-            <img src="${photos[0].src}" alt="${project.title}" loading="lazy" class="gallery-main-img proj-gallery-img">
-            <div class="proj-gallery-overlay">
-              <span class="project-category-badge">${project.category}</span>
-              ${thumbsHTML}
-            </div>
-           </div>`
-        : '';
+      const card = document.createElement('div');
+      card.className = 'project-tile';
+      card.setAttribute('data-category', project.category);
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `View ${project.title} details`);
 
-      // Components list
-      const componentsHTML = (project.components || []).length > 0
-        ? `<ul class="proj-detail-list">
-            ${project.components.map(c => `<li><i class="fa-solid fa-check"></i>${c}</li>`).join('')}
-           </ul>`
-        : '';
+      // Top skill tags (max 2)
+      const topSkills = (project.skills || []).slice(0, 2)
+        .map(s => `<span class="tile-skill-tag">${s}</span>`).join('');
 
-      // Footer links
-      const footerLinks = [];
-      if (project.url)    footerLinks.push(`<a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Live Demo</span></a>`);
-      if (project.github) footerLinks.push(`<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fa-brands fa-github"></i><span>GitHub</span></a>`);
-      const footerHTML = footerLinks.length > 0
-        ? `<div class="project-card-footer">${footerLinks.join('')}</div>` : '';
-
-      item.innerHTML = `
-        <!-- ── Compact summary row ── -->
-        <div class="proj-row-summary">
-          <div class="proj-row-left">
-            <div class="project-icon-box">
-              <i class="${project.image || 'fa-solid fa-gears'}"></i>
-            </div>
-            <div class="proj-row-info">
-              <span class="project-title">${project.title}</span>
-              <span class="project-tagline">${project.tagline}</span>
-            </div>
+      card.innerHTML = `
+        <!-- Visual preview -->
+        <div class="tile-preview">
+          ${hasImage
+            ? `<img src="${previewSrc}" alt="${project.title}" loading="lazy" class="tile-preview-img">`
+            : `<div class="tile-preview-icon"><i class="${project.image || 'fa-solid fa-gears'}"></i></div>`
+          }
+          <!-- Hover reveal overlay -->
+          <div class="tile-hover-overlay">
+            <span class="tile-open-label"><i class="fa-solid fa-expand"></i> View Details</span>
           </div>
-          <div class="proj-row-right">
-            <span class="project-category-pill">${project.category}</span>
-            <div class="proj-row-skills">${skillsRow}</div>
-            <button class="proj-expand-btn" aria-label="Toggle details">
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
+          <!-- Category badge floating on image -->
+          <span class="tile-category-badge">${project.category}</span>
         </div>
 
-        <!-- ── Expandable detail panel ── -->
-        <div class="proj-detail-panel">
-          <div class="proj-detail-inner">
-            ${galleryHTML}
-            <div class="proj-detail-content">
-              <p class="project-desc">${project.description}</p>
-              ${componentsHTML}
-              ${footerHTML}
-            </div>
+        <!-- Card footer info -->
+        <div class="tile-footer">
+          <div class="tile-icon-wrap">
+            <i class="${project.image || 'fa-solid fa-gears'}"></i>
+          </div>
+          <div class="tile-info">
+            <span class="tile-title">${project.title}</span>
+            <span class="tile-tagline">${project.tagline}</span>
           </div>
         </div>
+        ${topSkills ? `<div class="tile-skills">${topSkills}</div>` : ''}
       `;
 
-      // Toggle expand / collapse
-      const summary  = item.querySelector('.proj-row-summary');
-      const panel    = item.querySelector('.proj-detail-panel');
-      const expandBtn = item.querySelector('.proj-expand-btn');
+      // Open modal on click / Enter
+      const openModal = () => openProjectModal(project);
+      card.addEventListener('click', openModal);
+      card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openModal(); });
 
-      summary.addEventListener('click', () => {
-        const isOpen = item.classList.toggle('expanded');
-        panel.style.maxHeight = isOpen ? panel.scrollHeight + 'px' : '0';
-        // Re-measure after image might have loaded
-        if (isOpen) {
-          setTimeout(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; }, 200);
-        }
+      // Mouse spotlight
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
       });
 
-      // Prevent link/button clicks from bubbling to toggle
-      panel.querySelectorAll('a, button:not(.proj-expand-btn), .photo-thumb').forEach(el => {
-        el.addEventListener('click', e => e.stopPropagation());
-      });
-
-      // Photo gallery tab switcher
-      if (photos.length > 1) {
-        const mainImg = item.querySelector('.proj-gallery-img');
-        item.querySelectorAll('.photo-thumb').forEach(thumb => {
-          thumb.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mainImg.style.opacity = '0';
-            setTimeout(() => {
-              mainImg.src = thumb.getAttribute('data-src');
-              mainImg.style.opacity = '1';
-              // Recalculate panel height after image swap
-              setTimeout(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; }, 50);
-            }, 200);
-            item.querySelectorAll('.photo-thumb').forEach(t => t.classList.remove('active'));
-            thumb.classList.add('active');
-          });
-        });
-      }
-
-      // Spotlight mouse-track on summary row
-      summary.addEventListener('mousemove', (e) => {
-        const rect = summary.getBoundingClientRect();
-        summary.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-        summary.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-      });
-
-      projectsGrid.appendChild(item);
+      projectsGrid.appendChild(card);
     });
   }
 
   function setupProjectsFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const getProjectRows = () => document.querySelectorAll('.project-row');
+    const getProjectTiles = () => document.querySelectorAll('.project-tile');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -556,18 +650,18 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         const activeFilter = btn.getAttribute('data-filter');
 
-        getProjectRows().forEach(row => {
-          const rowCategory = row.getAttribute('data-category');
-          if (activeFilter === 'all' || rowCategory === activeFilter) {
-            row.style.display = 'block';
+        getProjectTiles().forEach(tile => {
+          const tileCategory = tile.getAttribute('data-category');
+          if (activeFilter === 'all' || tileCategory === activeFilter) {
+            tile.style.display = 'flex';
             setTimeout(() => {
-              row.style.opacity = '1';
-              row.style.transform = 'translateY(0)';
+              tile.style.opacity = '1';
+              tile.style.transform = 'translateY(0) scale(1)';
             }, 10);
           } else {
-            row.style.opacity = '0';
-            row.style.transform = 'translateY(10px)';
-            setTimeout(() => { row.style.display = 'none'; }, 300);
+            tile.style.opacity = '0';
+            tile.style.transform = 'translateY(8px) scale(0.97)';
+            setTimeout(() => { tile.style.display = 'none'; }, 300);
           }
         });
       });
