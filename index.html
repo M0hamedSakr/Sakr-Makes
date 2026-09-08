@@ -222,11 +222,13 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
     rel="stylesheet">
   <!-- FontAwesome Icons -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.min.css" as="style">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 
 <body>
@@ -250,7 +252,7 @@
       </div>
 
       <div class="intro-logo-circle">
-        <img src="Logo.webp" alt="Sakr Makes Logo" class="intro-logo">
+        <img src="Logo.webp" width="200" height="200" alt="Sakr Makes Logo" class="intro-logo">
         <div class="intro-logo-shimmer"></div>
       </div>
     </div>
@@ -272,7 +274,7 @@
     <div class="header-container">
       <a href="#" class="logo">
         <div class="nav-logo-container">
-          <img src="Logo.webp" alt="Sakr Makes Brand Logo" class="nav-logo-img">
+          <img src="Logo.webp" width="200" height="200" alt="Sakr Makes Brand Logo" class="nav-logo-img">
         </div>
         <span class="logo-text">Sakr<span class="logo-main">Makes</span></span>
       </a>
@@ -318,7 +320,7 @@
             <div class="brand-corner brand-corner-br"></div>
             <div class="brand-content-wrap">
               <div class="brand-icon-new brand-logo-container">
-                <img src="Logo.webp" alt="Sakr Makes Logo" class="brand-logo-img">
+                <img src="Logo.webp" width="200" height="200" alt="Sakr Makes Logo" class="brand-logo-img">
                 <div class="brand-icon-sub"><i class="fa-solid fa-screwdriver-wrench"></i></div>
               </div>
               <div class="brand-details">
@@ -383,7 +385,7 @@
 
             <!-- Circular Profile Photo Container -->
             <div class="profile-circle-container">
-              <img src="Mohamed Sakr.webp" alt="Mohamed Sakr — Founder of Sakr Makes" class="profile-circle-img">
+              <img src="Mohamed Sakr.webp" width="400" height="400" alt="Mohamed Sakr — Founder of Sakr Makes" class="profile-circle-img">
             </div>
           </div>
         </div>
@@ -490,7 +492,7 @@
         <!-- Item 1: Gear -->
         <div class="threed-card bento-wide">
           <div class="threed-img-wrap">
-            <img src="3D1.webp" alt="Rack & Pinion Gear System" class="threed-img" loading="lazy">
+            <img src="3D1.webp" width="800" height="600" alt="Rack & Pinion Gear System" class="threed-img" loading="lazy">
             <div class="threed-overlay">
               <div class="threed-badge"><i class="fa-solid fa-gear"></i></div>
             </div>
@@ -504,7 +506,7 @@
         <!-- Item 2: Cleaner Robot -->
         <div class="threed-card bento-tall">
           <div class="threed-img-wrap">
-            <img src="3D2.webp" alt="Cleaner Robot Chassis" class="threed-img" loading="lazy">
+            <img src="3D2.webp" width="800" height="600" alt="Cleaner Robot Chassis" class="threed-img" loading="lazy">
             <div class="threed-overlay">
               <div class="threed-badge"><i class="fa-solid fa-robot"></i></div>
             </div>
@@ -518,7 +520,7 @@
         <!-- Item 3: Motor Pill Dispenser -->
         <div class="threed-card">
           <div class="threed-img-wrap">
-            <img src="3D3.webp" alt="Motor Pill Dispenser" class="threed-img" loading="lazy">
+            <img src="3D3.webp" width="800" height="600" alt="Motor Pill Dispenser" class="threed-img" loading="lazy">
             <div class="threed-overlay">
               <div class="threed-badge"><i class="fa-solid fa-pills"></i></div>
             </div>
@@ -532,7 +534,7 @@
         <!-- Item 4: Blood Refrigerator -->
         <div class="threed-card">
           <div class="threed-img-wrap">
-            <img src="3D4.webp" alt="Blood Refrigerator" class="threed-img" loading="lazy">
+            <img src="3D4.webp" width="800" height="600" alt="Blood Refrigerator" class="threed-img" loading="lazy">
             <div class="threed-overlay">
               <div class="threed-badge"><i class="fa-solid fa-temperature-snow"></i></div>
             </div>
@@ -546,9 +548,9 @@
         <!-- Item 5: Drone Prototype -->
         <div class="threed-card bento-wide">
           <div class="threed-img-wrap" style="display: flex;">
-            <img src="Drnone.webp" alt="Drone Frame" class="threed-img" style="width: 33.33%;" loading="lazy">
-            <img src="Drnone1.webp" alt="Drone Assembly" class="threed-img" style="width: 33.33%; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);" loading="lazy">
-            <img src="Drnone2.webp" alt="Drone Mechanics" class="threed-img" style="width: 33.33%;" loading="lazy">
+            <img src="Drnone.webp" width="800" height="600" alt="Drone Frame" class="threed-img" style="width: 33.33%;" loading="lazy">
+            <img src="Drnone1.webp" width="800" height="600" alt="Drone Assembly" class="threed-img" style="width: 33.33%; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);" loading="lazy">
+            <img src="Drnone2.webp" width="800" height="600" alt="Drone Mechanics" class="threed-img" style="width: 33.33%;" loading="lazy">
             <div class="threed-overlay">
               <div class="threed-badge"><i class="fa-solid fa-helicopter"></i></div>
             </div>
@@ -576,7 +578,7 @@
           <meta itemprop="keywords" content="Mohamed Sakr ACPC, Mohamed Sakr competition, Mohamed Sakr programming contest, Sakr Makes">
           <div class="gallery-img-wrap">
             <img
-              src="persnal2.webp"
+              src="persnal2.webp" width="800" height="600"
               alt="Mohamed Sakr at ACPC — African and Arab Collegiate Programming Championship contestant, Sakr Makes Founder"
               class="gallery-img"
               loading="lazy"
@@ -605,7 +607,7 @@
           <meta itemprop="keywords" content="Mohamed Sakr robotics, Mohamed Sakr robot, Sakr Makes robotics, Mohamed Sakr hardware engineering">
           <div class="gallery-img-wrap">
             <img
-              src="Persnal3.webp"
+              src="Persnal3.webp" width="800" height="600"
               alt="Mohamed Sakr with his self-built wheeled robot — Sakr Makes robotics and hardware engineering project"
               class="gallery-img"
               loading="lazy"
@@ -634,7 +636,7 @@
           <meta itemprop="keywords" content="Mohamed Sakr maker, Mohamed Sakr engineer, Sakr Makes projects, Mohamed Sakr 3D printing, Mohamed Sakr prototyping">
           <div class="gallery-img-wrap">
             <img
-              src="Persnal4.webp"
+              src="Persnal4.webp" width="800" height="600"
               alt="Mohamed Sakr showcasing two robot prototypes he built — Sakr Makes hardware engineering and maker projects"
               class="gallery-img"
               loading="lazy"
@@ -663,7 +665,7 @@
           <meta itemprop="keywords" content="Mohamed Sakr Fusion 360, Mohamed Sakr 3D design, Sakr Makes design, Mohamed Sakr laptop, Mohamed Sakr build">
           <div class="gallery-img-wrap">
             <img
-              src="Persnal5.webp"
+              src="Persnal5.webp" width="800" height="600"
               alt="Mohamed Sakr holding laptop with Fusion 360 robot design and physical prototype — Sakr Makes engineering and maker project"
               class="gallery-img"
               loading="lazy"
@@ -692,7 +694,7 @@
           <meta itemprop="keywords" content="Mohamed Sakr NASA, Mohamed Sakr Space Apps, Mohamed Sakr hackathon, NASA Space Apps Cairo">
           <div class="gallery-img-wrap">
             <img
-              src="Persnal6.webp"
+              src="Persnal6.webp" width="800" height="600"
               alt="Mohamed Sakr at the NASA Space Apps Cairo Competition"
               class="gallery-img"
               loading="lazy"
@@ -776,7 +778,7 @@
             <meta itemprop="publisher" content="Sakr Makes">
             <a href="https://www.instagram.com/p/DWhTC6UDKUD/?igsh=ajJwd2ZzNW1uM2R4" target="_blank" rel="noopener noreferrer" class="post-img-link" aria-label="View post on Instagram">
               <div class="post-img-wrapper">
-                <img src="1.webp" alt="Mohamed Sakr Sakr Makes post — 5 websites that will save you days if you are starting from zero" class="post-img" loading="lazy" itemprop="image">
+                <img src="1.webp" width="800" height="450" alt="Mohamed Sakr Sakr Makes post — 5 websites that will save you days if you are starting from zero" class="post-img" loading="lazy" itemprop="image">
                 <div class="post-img-overlay">
                   <div class="post-platform-badge">
                     <i class="fa-brands fa-instagram"></i> Instagram
@@ -809,7 +811,7 @@
             <meta itemprop="publisher" content="Sakr Makes">
             <a href="https://www.instagram.com/p/DXpQiFojMND/?igsh=MTI0cWRtd2o0ZWNuYw==" target="_blank" rel="noopener noreferrer" class="post-img-link" aria-label="View post on Instagram">
               <div class="post-img-wrapper">
-                <img src="2.webp" alt="Mohamed Sakr Sakr Makes post — How to learn Problem Solving in the AI era" class="post-img" loading="lazy" itemprop="image">
+                <img src="2.webp" width="800" height="450" alt="Mohamed Sakr Sakr Makes post — How to learn Problem Solving in the AI era" class="post-img" loading="lazy" itemprop="image">
                 <div class="post-img-overlay">
                   <div class="post-platform-badge">
                     <i class="fa-brands fa-instagram"></i> Instagram
@@ -842,7 +844,7 @@
             <meta itemprop="publisher" content="Sakr Makes">
             <a href="https://www.youtube.com/watch?v=UtmpBTK_-9s&list=PLb9mubSa3Ru4" target="_blank" rel="noopener noreferrer" class="post-img-link" aria-label="View video on YouTube">
               <div class="post-img-wrapper" style="aspect-ratio: 16 / 9;">
-                <img src="Fusion360.webp" alt="Mohamed Sakr Sakr Makes post — Fusion 360 3D Design Tutorials" class="post-img" loading="lazy" itemprop="image">
+                <img src="Fusion360.webp" width="800" height="450" alt="Mohamed Sakr Sakr Makes post — Fusion 360 3D Design Tutorials" class="post-img" loading="lazy" itemprop="image">
                 <div class="post-img-overlay">
                   <div class="post-platform-badge" style="background: rgba(255, 0, 0, 0.9);">
                     <i class="fa-brands fa-youtube"></i> YouTube
@@ -902,7 +904,7 @@
         <div class="about-personal-banner">
           <div class="about-personal-glow"></div>
           <div class="about-personal-photo-wrap">
-            <img src="Personal.webp" alt="Mohamed Sakr — Founder of Sakr Makes, professional photo" class="about-personal-img" loading="lazy">
+            <img src="Personal.webp" width="400" height="400" alt="Mohamed Sakr — Founder of Sakr Makes, professional photo" class="about-personal-img" loading="lazy">
             <div class="about-personal-photo-overlay">
               <div class="personal-photo-badge">
                 <i class="fa-solid fa-crown"></i>
@@ -1068,7 +1070,7 @@
       <!-- ── Brand Column ── -->
       <div class="footer-col footer-brand">
         <a href="#" class="footer-logo">
-          <img src="Logo.webp" alt="Sakr Makes Logo" class="footer-logo-img">
+          <img src="Logo.webp" width="200" height="200" alt="Sakr Makes Logo" class="footer-logo-img">
           <span class="footer-logo-text">Sakr<span class="footer-logo-accent">Makes</span></span>
         </a>
         <p class="footer-brand-desc">
@@ -1117,7 +1119,7 @@
           <li><a href="https://www.facebook.com/sakr.makes" target="_blank" rel="noopener" class="footer-nav-link"><i
                 class="fa-brands fa-facebook"></i> Facebook</a></li>
           <li><a href="https://khamsat.com/user/mohamed_sakr_ai" target="_blank" rel="noopener" class="footer-nav-link khamsat-link">
-                <img src="https://khamsat.com/favicon.ico" alt="Khamsat Logo" class="khamsat-logo-img"> Khamsat</a></li>
+                <img src="https://khamsat.com/favicon.ico" width="32" height="32" alt="Khamsat Logo" class="khamsat-logo-img"> Khamsat</a></li>
         </ul>
       </div>
 
@@ -1208,10 +1210,10 @@
   </script>
 
   <!-- Custom JS -->
-  <script src="script.js"></script>
+  <script defer src="script.min.js"></script>
 
   <!-- AI Chatbot -->
-  <script src="chatbot.js"></script>
+  <script defer src="chatbot.min.js"></script>
 
   <!-- Vercel Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
