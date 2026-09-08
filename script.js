@@ -226,6 +226,33 @@ document.addEventListener('DOMContentLoaded', () => {
         "skills": ["Arduino", "Sensors", "Fall Detection", "Control Systems"],
         "image": "fa-solid fa-wheelchair",
         "photo": "1755630400893.webp"
+      },
+      {
+        "id": "travel-planner",
+        "title": "Travel Planner",
+        "tagline": "Premium Travel Experiences",
+        "category": "Web Dev",
+        "description": "A luxurious and interactive web application for browsing and booking premium travel experiences around the world. This platform offers curated journeys, event planning, an interactive map, and a personalized travel dashboard.",
+        "components": ["Dynamic Homepage with animated particles", "Interactive traveler dashboard", "Event Calendar widget", "Interactive Egypt SVG map", "Chatbot Assistant"],
+        "skills": ["HTML5", "CSS3", "JavaScript", "GSAP"],
+        "image": "fa-solid fa-plane-departure",
+        "gallery": [
+          { "src": "travel-events-planner1.webp", "label": "Home" },
+          { "src": "travel-events-planner2.webp", "label": "Destinations" },
+          { "src": "travel-events-planner3.webp", "label": "Dashboard" },
+          { "src": "travel-events-planner4.webp", "label": "Map" }
+        ]
+      },
+      {
+        "id": "titanic-survival",
+        "title": "Titanic Survival Prediction",
+        "tagline": "Data Analysis & ML Model",
+        "category": "AI & Software",
+        "description": "A comprehensive data analysis and machine learning project exploring the classic Titanic dataset. It features extensive data cleaning, exploratory data analysis (EDA), feature engineering, and a Logistic Regression model to predict passenger survival.",
+        "components": ["Data Loading & Preprocessing", "Exploratory Data Analysis (EDA)", "Feature Engineering & Encoding", "Logistic Regression Modeling", "Model Evaluation & Metrics"],
+        "skills": ["Python", "Pandas", "Seaborn", "Plotly", "Scikit-Learn"],
+        "image": "fa-solid fa-ship",
+        "github": "https://github.com/M0hamedSakr/Titanic-Survival-ML"
       }
     ]
   };
@@ -399,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (project.photo)       photos.push({ src: project.photo,       label: 'Design' });
       if (project.teamPhoto)   photos.push({ src: project.teamPhoto,   label: 'Team'   });
       if (project.detailPhoto) photos.push({ src: project.detailPhoto, label: 'Detail' });
+      if (project.gallery)     photos.push(...project.gallery);
 
       // --- Photo banner with optional gallery tabs ---
       let photoHTML = '';
