@@ -223,9 +223,8 @@
     rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <!-- Custom CSS -->
   <link rel="preload" href="style.min.css" as="style">
   <link rel="stylesheet" href="style.min.css">
@@ -385,7 +384,7 @@
 
             <!-- Circular Profile Photo Container -->
             <div class="profile-circle-container">
-              <img src="Mohamed Sakr.webp" width="400" height="400" alt="Mohamed Sakr — Founder of Sakr Makes" class="profile-circle-img">
+              <img src="Mohamed Sakr.webp" width="400" height="400" alt="Mohamed Sakr — Founder of Sakr Makes" class="profile-circle-img" fetchpriority="high">
             </div>
           </div>
         </div>
